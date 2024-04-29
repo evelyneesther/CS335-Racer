@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckc1t0mybcn1i"]
+
+[ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="1_ta2ws"]
+[ext_resource type="Script" path="res://Character2D.gd" id="2_hx2bv"]
+[ext_resource type="Texture2D" uid="uid://b7tl54687imyc" path="res://addons/2d_shapes/Triangle.svg" id="3_m4bow"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1278, 1278)
+scale = Vector2(20, 20)
+texture = ExtResource("1_ta2ws")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(1690, 1353)
+script = ExtResource("2_hx2bv")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(2, -14)
+scale = Vector2(5, 5)
+texture = ExtResource("3_m4bow")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
