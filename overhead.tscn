@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5djhsdysur05"]
+
+[ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="1_r20lw"]
+[ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
+
+[node name="Overhead" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(100, 100)
+texture = ExtResource("1_r20lw")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_plmio")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+rotation = 1.5708
+texture = ExtResource("1_r20lw")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
