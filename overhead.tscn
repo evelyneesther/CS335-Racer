@@ -6,10 +6,11 @@
 [node name="Overhead" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(100, 100)
+scale = Vector2(1000, 1000)
 texture = ExtResource("1_r20lw")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(10, 10)
 script = ExtResource("2_plmio")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
@@ -17,3 +18,4 @@ rotation = 1.5708
 texture = ExtResource("1_r20lw")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(0.1, 0.1)
