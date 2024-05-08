@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc1ql0hde8ixq"]
+
+[ext_resource type="Script" path="res://ModMenuBackButton.gd" id="1_jteio"]
+[ext_resource type="FontFile" uid="uid://d2origl432qmk" path="res://AeogoPixellated-DYYEd.ttf" id="1_yt062"]
+[ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="3_cp67e"]
+
+[sub_resource type="GDScript" id="GDScript_o5dbj"]
+script/source = "extends TextureRect
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var curID = 0
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 23.0
+offset_right = 261.0
+offset_bottom = 63.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 150
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yt062")
+theme_override_font_sizes/font_size = 20
+text = "Back"
+script = ExtResource("1_jteio")
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 324.0
+offset_top = 296.0
+offset_right = 535.0
+offset_bottom = 341.0
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_yt062")
+item_count = 2
+selected = 0
+popup/item_0/text = "Default Dorsals"
+popup/item_0/id = 0
+popup/item_1/text = "Aero Dorsals"
+popup/item_1/id = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 228.0
+offset_right = 364.0
+offset_bottom = 268.0
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_yt062")
+item_count = 2
+selected = 0
+popup/item_0/text = "Default Front Wing"
+popup/item_0/id = 0
+popup/item_1/text = "Boosted Front Wing"
+popup/item_1/id = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 94.0
+offset_right = 1008.0
+offset_bottom = 543.0
+texture = ExtResource("3_cp67e")
+script = SubResource("GDScript_o5dbj")

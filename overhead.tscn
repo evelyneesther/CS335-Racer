@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=6 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="1_r20lw"]
 [ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
+[ext_resource type="FontFile" uid="uid://d2origl432qmk" path="res://AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
+[ext_resource type="Script" path="res://Speedometer.gd" id="3_sf058"]
+
+[sub_resource type="GDScript" id="GDScript_xih6o"]
+script/source = "extends TextEdit
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [node name="Overhead" type="Node2D"]
 
@@ -19,3 +35,25 @@ texture = ExtResource("1_r20lw")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(0.1, 0.1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 4839.0
+offset_top = 2154.0
+offset_right = 5654.0
+offset_bottom = 3181.0
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cab4r")
+theme_override_font_sizes/font_size = 500
+text = "Speed 0"
+placeholder_text = "Speed 0"
+script = ExtResource("3_sf058")
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/TextEdit"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = SubResource("GDScript_xih6o")
+
+[connection signal="speed_change" from="CharacterBody2D" to="MarginContainer/TextEdit" method="_on_character_body_2d_speed_change"]

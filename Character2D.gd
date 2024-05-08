@@ -8,14 +8,16 @@ const MASS = 1
 
 var energy = 0 # for accurate ish physics
 var speed = 0
-
+signal speed_change
 # polarity of velocity vector, what turns speed into velocity, stops instant stops on no input
 var polarity = 0
 
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:
-			get_tree().quit()
+			get_tree().change_scene_to_file("res://main_menu.tscn")
+
+		
 
 func _physics_process(delta):	
 	var move_input = Input.get_axis("back", "forward")
@@ -31,6 +33,7 @@ func _physics_process(delta):
 		energy = ((MAX_SPEED ** 2) * MASS) / 2
 	
 	speed = sqrt((2 * energy) / MASS)
+	emit_signal("speed_change", speed)
 	
 	velocity = transform.x * polarity * speed
 	
