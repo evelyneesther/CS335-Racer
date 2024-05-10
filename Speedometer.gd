@@ -4,8 +4,8 @@ var number
 var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	number=0
-	self.text="0"
+	number=0.0
+	self.text="0.0"
 	pass # Replace with function body.
 
 func _process(delta):
