@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=7 format=3 uid="uid://c5djhsdysur05"]
 
+[ext_resource type="Texture2D" uid="uid://c8twshdf6yeec" path="res://Art/Map-Layout-Sheet.png" id="1_8b6sk"]
 [ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="1_r20lw"]
 [ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
@@ -23,8 +24,9 @@ func _process(delta):
 [node name="Overhead" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1000, 1000)
-texture = ExtResource("1_r20lw")
+position = Vector2(7040, -17791)
+scale = Vector2(75, 75)
+texture = ExtResource("1_8b6sk")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
