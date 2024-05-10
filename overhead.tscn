@@ -1,14 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=7 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Texture2D" uid="uid://da6758e7e3t6w" path="res://Art/Map-Layout-Sheet.png" id="1_8b6sk"]
-[ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="1_r20lw"]
 [ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
+[ext_resource type="Script" path="res://PlayerSprite.gd" id="3_5sxpl"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
 [ext_resource type="Script" path="res://Speedometer.gd" id="3_sf058"]
-[ext_resource type="Script" path="res://Loop Block.gd" id="6_7df5t"]
-[ext_resource type="Script" path="res://LoopDetector.gd" id="8_bo14c"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qu14q"]
 
 [sub_resource type="GDScript" id="GDScript_15smr"]
 script/source = "extends Camera2D
@@ -25,40 +21,12 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tv153"]
-size = Vector2(130.4, 132)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7fln"]
-size = Vector2(9454, 3930)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmwsm"]
-size = Vector2(24737.5, 15916.3)
-
 [node name="Overhead" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(7040, -17791)
-scale = Vector2(75, 75)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4864, -12799)
+scale = Vector2(50, 50)
 texture = ExtResource("1_8b6sk")
-region_enabled = true
-region_rect = Rect2(0, 0, 1250, 750)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Background"]
-visible = false
-position = Vector2(357.662, 300.061)
-disable_mode = 2
-physics_material_override = SubResource("PhysicsMaterial_qu14q")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Background/StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(0.00506592, -1.07386, -891.288, 1.07281, -921.395, -2.15385, -935.368, -32.2605, -933.222, -614.981, -925.688, -626.807, -903.115, -630.034, -624.648, -630.034, -614.982, -625.727, -611.755, -614.981, -610.675, -599.927, -610.675, -425.754, -610.675, -407.474, -605.302, -395.647, -595.622, -395.647, -129.022, -393.501, -110.742, -396.727, -105.368, -419.301, -106.435, -536.487, -104.288, -600.994, -99.9816, -614.981, -84.9416, -619.274, 201.045, -619.274, 213.952, -618.207, 221.472, -606.38, 221.472, -591.327, 223.632, -365.541, 219.325, -348.341, 212.872, -345.114, 202.125, -341.887, 33.325, -342.967, 12.8984, -336.514, 7.52505, -319.314, 6.44507, -51.6072, 6.00507, -16.0605, 5.61838, -5.03386)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/StaticBody2D"]
-polygon = PackedVector2Array(-826.435, -107.501, -830.462, -122.794, -832.875, -543.234, -825.635, -551.287, -704.822, -550.487, -698.368, -548.074, -695.955, -536.794, -697.568, -316.101, -690.315, -307.247, -680.648, -304.021, -130.542, -304.834, -120.875, -302.407, -116.035, -293.554, -114.422, -280.661, -114.422, -261.341, -114.342, -114.274, -116.742, -106.141, -122.488, -103.741, -305.035, -104.607, -424.155, -103.901, -638.702, -104.607, -795.848, -103.181, -815.942, -105.327)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Background/StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(-11.5549, -539.314, -14.4216, -529.981, -12.9816, -499.127, -12.9816, -469.714, -13.7016, -438.861, -12.9816, -432.394, -8.67496, -428.807, 121.205, -429.527, 127.658, -432.394, 127.658, -446.034, 129.805, -529.981, 126.218, -540.034, 119.045, -544.341, -4.36829, -544.341)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -66,23 +34,17 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Player" type="CharacterBody2D" parent="."]
-rotation = 3.14159
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 scale = Vector2(10, 10)
 script = ExtResource("2_plmio")
 
-[node name="PlayerCam" type="Camera2D" parent="Player"]
+[node name="PlayerCam" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(0.05, 0.05)
 script = SubResource("GDScript_15smr")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-rotation = 1.5708
-texture = ExtResource("1_r20lw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(0.5, -0.699997)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_tv153")
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+rotation = -1.5708
+script = ExtResource("3_5sxpl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -112,22 +74,4 @@ text_direction = 1
 script = ExtResource("3_sf058")
 metadata/ignore_rotation = true
 
-[node name="LoopBlock" type="StaticBody2D" parent="."]
-position = Vector2(24972, -17704)
-script = ExtResource("6_7df5t")
-
-[node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(4973, 1956)
-shape = SubResource("RectangleShape2D_i7fln")
-
-[node name="Loop Detector" type="Area2D" parent="."]
-position = Vector2(43238, -35894)
-script = ExtResource("8_bo14c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(-5022.75, 2021.88)
-shape = SubResource("RectangleShape2D_pmwsm")
-
-[connection signal="speed_change" from="Player" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
-[connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
-[connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
+[connection signal="speed_change" from="CharacterBody2D" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
