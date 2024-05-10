@@ -2,6 +2,7 @@ extends StaticBody2D
 
 func _on_loop_detector_player_detected():
 	self.set_collision_layer_value(1, false)
+	$TrafficCones.visible=false
 	pass # Replace with function body.
 
 
