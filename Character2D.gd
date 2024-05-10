@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+# TODO: improve polarity system such that changing directions is good
+
 const MAX_SPEED = 3000 # pix/sec
 const ACCELERATION_COIFICIENT = 4000 # pix/sec^2
 const FRICTION_COIFICTIENT = 12000
@@ -17,14 +19,21 @@ func _unhandled_input(event):
 		if event.pressed and event.keycode == KEY_ESCAPE:
 			get_tree().change_scene_to_file("res://main_menu.tscn")
 
-		
-
 func _physics_process(delta):	
 	var move_input = Input.get_axis("back", "forward")
 	var rotation_direction = Input.get_axis("left", "right")
 	
-	# Real physics not implemented right, deal with later
+	applyAcceleration(move_input)
 	
+	velocity = transform.x * polarity * speed
+	
+	rotation += rotation_direction * TURN_SPEED * delta
+	
+	applyFriction(move_input)
+	
+	move_and_slide()
+
+func applyAcceleration(move_input):
 	if move_input != 0:
 		energy += ACCELERATION_COIFICIENT
 		polarity = move_input
@@ -33,16 +42,10 @@ func _physics_process(delta):
 		energy = ((MAX_SPEED ** 2) * MASS) / 2
 	
 	speed = sqrt((2 * energy) / MASS)
+
 	emit_signal("speed_change", speed)
 	
 	velocity = transform.x * polarity * speed
 	
 	rotation += rotation_direction * TURN_SPEED * delta
 	
-	if energy > 0 and not move_input:
-		energy -= FRICTION_COIFICTIENT
-	
-	if energy < 0:
-		energy = 0
-	
-	move_and_slide()
