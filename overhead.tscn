@@ -30,7 +30,7 @@ func _process(delta):
 size = Vector2(218.4, 118.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(16392, 9408)
+size = Vector2(16344, 4312)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(6242, 1810)
@@ -118,7 +118,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_4iu2i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(8476, -6144)
+position = Vector2(8500, -8692)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]

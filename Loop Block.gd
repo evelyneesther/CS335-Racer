@@ -8,4 +8,5 @@ func _on_loop_detector_player_detected():
 
 func _on_new_lap_detector_lap_started():
 	self.set_collision_layer_value(1, true)
+	$TrafficCones.visible=true
 	pass # Replace with function body.
