@@ -1,23 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bc1ql0hde8ixq"]
 
 [ext_resource type="Script" path="res://ModMenuBackButton.gd" id="1_jteio"]
-[ext_resource type="FontFile" uid="uid://d2origl432qmk" path="res://AeogoPixellated-DYYEd.ttf" id="1_yt062"]
-[ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="3_cp67e"]
-
-[sub_resource type="GDScript" id="GDScript_o5dbj"]
-script/source = "extends TextureRect
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var curID = 0
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="1_yt062"]
+[ext_resource type="Script" path="res://CarSprite.gd" id="2_tna3j"]
+[ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_1ofi6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -26,6 +12,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 120.0
+offset_right = 768.0
+offset_bottom = 160.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer2"]
+position = Vector2(151.375, 192.5)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("3_1ofi6")
+script = ExtResource("2_tna3j")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -43,14 +42,14 @@ theme_override_font_sizes/font_size = 20
 text = "Back"
 script = ExtResource("1_jteio")
 
-[node name="MarginContainer3" type="MarginContainer" parent="."]
+[node name="DorsalWingContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 offset_left = 324.0
 offset_top = 296.0
 offset_right = 535.0
 offset_bottom = 341.0
 
-[node name="OptionButton" type="OptionButton" parent="MarginContainer3"]
+[node name="DorsalWingButton" type="OptionButton" parent="DorsalWingContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_yt062")
@@ -61,14 +60,14 @@ popup/item_0/id = 0
 popup/item_1/text = "Aero Dorsals"
 popup/item_1/id = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
+[node name="FrontWingContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 228.0
 offset_right = 364.0
 offset_bottom = 268.0
 
-[node name="OptionButton" type="OptionButton" parent="MarginContainer2"]
+[node name="FrontWingButton" type="OptionButton" parent="FrontWingContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_yt062")
@@ -79,11 +78,5 @@ popup/item_0/id = 0
 popup/item_1/text = "Boosted Front Wing"
 popup/item_1/id = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 729.0
-offset_top = 94.0
-offset_right = 1008.0
-offset_bottom = 543.0
-texture = ExtResource("3_cp67e")
-script = SubResource("GDScript_o5dbj")
+[connection signal="item_selected" from="DorsalWingContainer/DorsalWingButton" to="MarginContainer2/Sprite2D" method="_on_dorsal_wing_button_item_selected"]
+[connection signal="item_selected" from="FrontWingContainer/FrontWingButton" to="MarginContainer2/Sprite2D" method="_on_front_wing_button_item_selected"]
