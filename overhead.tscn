@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=15 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Texture2D" uid="uid://da6758e7e3t6w" path="res://Art/Map-Layout-Sheet.png" id="1_8b6sk"]
 [ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
 [ext_resource type="Script" path="res://PlayerSprite.gd" id="3_5sxpl"]
+[ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_52sov"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
-[ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://icon.svg" id="3_kl1r0"]
 [ext_resource type="Script" path="res://Speedometer.gd" id="3_sf058"]
+[ext_resource type="Script" path="res://LoopDetector.gd" id="7_4iu2i"]
+[ext_resource type="Script" path="res://Loop Block.gd" id="8_8d42g"]
+[ext_resource type="Script" path="res://NewLapDetector.gd" id="9_bak2g"]
 
 [sub_resource type="GDScript" id="GDScript_15smr"]
 script/source = "extends Camera2D
@@ -22,6 +25,18 @@ func _process(delta):
 	pass
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywgp1"]
+size = Vector2(218.4, 118.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
+size = Vector2(16392, 9408)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
+size = Vector2(6242, 1810)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dabs5"]
+size = Vector2(7264, 5256)
+
 [node name="Overhead" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -36,6 +51,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(32, -1088)
 rotation = -3.14159
 scale = Vector2(10, 10)
 script = ExtResource("2_plmio")
@@ -46,8 +62,13 @@ script = SubResource("GDScript_15smr")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 rotation = 1.5708
-texture = ExtResource("3_kl1r0")
+texture = ExtResource("3_52sov")
 script = ExtResource("3_5sxpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(6, -4.8)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ywgp1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -77,4 +98,46 @@ text_direction = 1
 script = ExtResource("3_sf058")
 metadata/ignore_rotation = true
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(22448, 2280, 10992, 2328, 3520, 2328, -7504, 2280, -17152, 2280, -22664, 2176, -23472, 1848, -23784, 904, -23856, -32, -23808, -6640, -23808, -13928, -23808, -22584, -23808, -28680, -23448, -29136, -22664, -29264, -8360, -29288, -7960, -29136, -7808, -28832, -7832, -18216, -7776, -17784, -7472, -17584, -7144, -17504, 16400, -17456, 16984, -17608, 17392, -18016, 17488, -19360, 17488, -27792, 17696, -28376, 18048, -28656, 19120, -28704, 22264, -28760, 33240, -28760, 33696, -28528, 33776, -27896, 33824, -24336, 33848, -17280, 33776, -15168, 33440, -14928, 33192, -14936, 23968, -14888, 23160, -14232, 23032, -13288, 23000, -11448, 23136, 984, 22976, 2096)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128, -19400, 29208, -19912, 29176, -24720, 28840, -24984, 22784, -24968, 22280, -24888, 22064, -24544, 22048, -19496)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16648, -12888, 17056, -12280, 17088, -10824, 17088, -3528, 16856, -2920, 12584, -2920, -7016, -2952, -17864, -2952, -18648, -3264, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
+
+[node name="Loop Detector" type="Area2D" parent="."]
+position = Vector2(17128, -17928)
+script = ExtResource("7_4iu2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
+position = Vector2(8476, -6144)
+shape = SubResource("RectangleShape2D_2vg0w")
+
+[node name="LoopBlock" type="StaticBody2D" parent="."]
+position = Vector2(16832, -12648)
+script = ExtResource("8_8d42g")
+
+[node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
+position = Vector2(3111, 895)
+shape = SubResource("RectangleShape2D_upce0")
+
+[node name="NewLapDetector" type="Area2D" parent="."]
+script = ExtResource("9_bak2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
+position = Vector2(-8904, -260)
+shape = SubResource("RectangleShape2D_dabs5")
+
 [connection signal="speed_change" from="CharacterBody2D" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
+[connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
+[connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
+[connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
+[connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
