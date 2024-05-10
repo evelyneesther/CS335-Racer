@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm6ru4lo63q2n"
-path="res://.godot/imported/Blue - FullyModded.png-1cdb66dd9d0aaa1d7081ca1be64bb58f.ctex"
+path="res://.godot/imported/Blue - FrontWing BackWing SideWing.png-032590243516e1f00db9277b8c8add62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Blue/Blue - FullyModded.png"
-dest_files=["res://.godot/imported/Blue - FullyModded.png-1cdb66dd9d0aaa1d7081ca1be64bb58f.ctex"]
+source_file="res://Art/Blue/Blue - FrontWing BackWing SideWing.png"
+dest_files=["res://.godot/imported/Blue - FrontWing BackWing SideWing.png-032590243516e1f00db9277b8c8add62.ctex"]
 
 [params]
 

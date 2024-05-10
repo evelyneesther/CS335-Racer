@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://da6758e7e3t6w" path="res://Art/Map-Layout-Sheet.png" id="1_8b6sk"]
 [ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
 [ext_resource type="Script" path="res://PlayerSprite.gd" id="3_5sxpl"]
-[ext_resource type="Texture2D" path="res://Art/Red/Red -.png" id="3_52sov"]
+[ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_52sov"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
 [ext_resource type="Script" path="res://Speedometer.gd" id="3_sf058"]
 [ext_resource type="Script" path="res://LoopDetector.gd" id="7_4iu2i"]
@@ -36,7 +36,7 @@ size = Vector2(16344, 4312)
 size = Vector2(6242, 1810)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabs5"]
-size = Vector2(7264, 5256)
+size = Vector2(17360, 14252)
 
 [node name="Overhead" type="Node2D"]
 
@@ -135,10 +135,11 @@ scale = Vector2(32, 32)
 texture = ExtResource("9_v4fai")
 
 [node name="NewLapDetector" type="Area2D" parent="."]
+position = Vector2(-768, -168)
 script = ExtResource("9_bak2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
-position = Vector2(-8904, -260)
+position = Vector2(-14672, -4554)
 shape = SubResource("RectangleShape2D_dabs5")
 
 [connection signal="speed_change" from="CharacterBody2D" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
