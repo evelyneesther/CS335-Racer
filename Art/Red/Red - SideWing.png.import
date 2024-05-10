@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fhmi41sc44sv"
-path="res://.godot/imported/Red - FullyModded.png-49ea20b41b49afa8d13432ede55d583f.ctex"
+uid="uid://b6ojutogev0xr"
+path="res://.godot/imported/Red - SideWing.png-1fd3283819291781bb810a58659505a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Red/Red - FullyModded.png"
-dest_files=["res://.godot/imported/Red - FullyModded.png-49ea20b41b49afa8d13432ede55d583f.ctex"]
+source_file="res://Art/Red/Red - SideWing.png"
+dest_files=["res://.godot/imported/Red - SideWing.png-1fd3283819291781bb810a58659505a6.ctex"]
 
 [params]
 

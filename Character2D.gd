@@ -23,6 +23,8 @@ func _physics_process(delta):
 	var move_input = Input.get_axis("back", "forward")
 	var rotation_direction = Input.get_axis("left", "right")
 	
+	move_input=hitWall(move_input)
+	
 	applyAcceleration(move_input)
 
 	velocity = transform.x * polarity * speed
@@ -32,6 +34,8 @@ func _physics_process(delta):
 	applyFriction(move_input)
 	
 	move_and_slide()
+	
+		
 
 func applyAcceleration(move_input):
 	if energy == 0:
@@ -70,10 +74,21 @@ func applyFriction(move_input):
 	
 	if energy < 0:
 		energy = 0
-
+		
+func hitWall(moveInput):
+	for i in get_slide_collision_count():
+		energy*=.85
+		if energy<6000:
+			energy=0
+			return(0)
+		
+	return(moveInput)
+	
 func printOutputs():
 	print("Speed: ")
 	print(speed)
 	print("Energy: ")
 	print(energy)
 	print()
+
+
