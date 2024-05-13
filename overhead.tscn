@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=17 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Texture2D" uid="uid://da6758e7e3t6w" path="res://Art/Map-Layout-Sheet.png" id="1_8b6sk"]
 [ext_resource type="Script" path="res://Character2D.gd" id="2_plmio"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Loop Block.gd" id="8_8d42g"]
 [ext_resource type="Script" path="res://NewLapDetector.gd" id="9_bak2g"]
 [ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Art/traffic cones.png" id="9_v4fai"]
+[ext_resource type="Script" path="res://AudioStreamPlayer.gd" id="11_lfaww"]
 
 [sub_resource type="GDScript" id="GDScript_15smr"]
 script/source = "extends Camera2D
@@ -141,6 +142,10 @@ script = ExtResource("9_bak2g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
 position = Vector2(-14672, -4554)
 shape = SubResource("RectangleShape2D_dabs5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 10.0
+script = ExtResource("11_lfaww")
 
 [connection signal="speed_change" from="CharacterBody2D" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]

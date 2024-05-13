@@ -3,9 +3,9 @@ extends CharacterBody2D
 # TODO: improve polarity system such that changing directions is good
 
 const MAX_SPEED = 3000 # pix/sec
-const ACCELERATION_COIFICIENT = 4000 # pix/sec^2
+const ACCELERATION_COIFICIENT = 6000 # pix/sec^2
 const FRICTION_COIFICTIENT = 20000
-const TURN_SPEED = 1.5 # rad/sec
+const TURN_SPEED = 2.2 # rad/sec
 const MASS = 1.2
 
 var energy = 0 # for accurate ish physics
