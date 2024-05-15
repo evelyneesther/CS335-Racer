@@ -19,10 +19,44 @@ func _ready():
 func _process(delta):
 	pass
 func selected_car():
+	var carCode=""
+	match color:
+		"Red":
+			carCode+="R"
+		"Blue":
+			carCode+="B"
+		"Green":
+			carCode+="G"
+		"Orange":
+			carCode+="O"
+		"Pink":
+			carCode+="P"
+	match front:
+		"":
+			carCode+="D"
+		"FrontWing ":
+			carCode+="W"
+	match  back:
+		"":
+			carCode+="D"
+		"BackWing ":
+			carCode+="W"
+	match sides:
+		"":
+			carCode+="D"
+		"SideWing":
+			carCode+="W"
+	match direction:
+		"":
+			carCode+="D"
+		"Reverse":
+			carCode+="R"
+			
+	CarArt.carCode=carCode
 	var carstr="res://Art/"+color+"/"+color+" - "+front+back+sides+direction
 	carstr=carstr.strip_edges()
 	
-	CarArt.car=carstr+".png"
+	CarArt.carPath=carstr+".png"
 	print(CarArt.selected_car())
 	return(carstr+".png")
 
@@ -39,7 +73,6 @@ func _on_dorsal_wing_button_item_selected(index):
 		sides=""
 	elif index==1:
 		sides="SideWing"
-	var newcar=selected_car()
 	self.texture=load(selected_car())
 	
 	pass # Replace with function body.

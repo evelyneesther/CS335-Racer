@@ -1,11 +1,12 @@
 extends Node
 
-var car
+var carPath
+var carCode
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	car="res://Art/Red/Red -.png"
+	carPath="res://Art/Red/Red -.png"
 	pass # Replace with function body.
 
 	
 func selected_car():
-	return(car)
+	return(carPath)
