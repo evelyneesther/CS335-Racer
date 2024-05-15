@@ -2,12 +2,12 @@ extends CharacterBody2D
 
 # TODO: improve polarity system such that changing directions is good
 
-const MAX_SPEED = 3000 # pix/sec
-const ACCELERATION_COIFICIENT = 6000 # pix/sec^2
+var maxSpeed = 3000 # pix/sec
+var accelerationCoifictient = 6000 # pix/sec^2
 const FRICTION_COIFICTIENT = 20000
-const TURN_SPEED = 2.2 # rad/sec
-const MASS = 1.2
-const DRIFT_MODIFIER = 0.5
+var turnSpeed = 2.2 # rad/sec
+var mass = 1.2
+var driftModifier = 0.5
 
 var energy = 0 # for accurate ish physics
 var speed = 0
@@ -19,6 +19,45 @@ var brake = 0
 
 signal speed_change
 
+func _ready():
+	var carCode=CarArt.carCode
+	match carCode[0]:
+		"R":
+			maxSpeed=3000
+		"O":
+			maxSpeed=2500
+		"B":
+			maxSpeed=1500
+		"G":
+			maxSpeed=2000
+		"P":
+			maxSpeed=5000
+	match carCode[1]:
+		"D":
+			mass=1.2
+			turnSpeed=2.2
+		"W":
+			mass+=.1
+			turnSpeed+=.3
+	match carCode[2]:
+		"D":
+			accelerationCoifictient=6000
+		"W":
+			mass+=.1
+			accelerationCoifictient=10000
+	match carCode[3]:
+		"D":
+			driftModifier=.5
+		"W":
+			mass+=.1
+			driftModifier=.85
+	print(maxSpeed)
+	print(mass)
+	
+			
+			
+	pass
+	
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:
@@ -40,7 +79,7 @@ func _physics_process(delta):
 
 	velocity = transform.x * polarity * speed
 	
-	rotation += rotation_direction * (TURN_SPEED + DRIFT_MODIFIER * brake) * delta
+	rotation += rotation_direction * (turnSpeed + driftModifier * brake) * delta
 	
 	applyFriction(move_input)
 	
@@ -51,17 +90,17 @@ func applyAcceleration(move_input):
 		polarity = move_input
 	
 	if polarity > 0:
-		energy += move_input * (ACCELERATION_COIFICIENT - brake * 3000)
+		energy += move_input * (accelerationCoifictient - brake * 3000)
 	elif polarity < 0:
-		energy += -1 * move_input * (ACCELERATION_COIFICIENT + brake * 3000)
+		energy += -1 * move_input * (accelerationCoifictient + brake * 3000)
 	
 	if energy < 0:
 		energy = 0
 	
-	if speed > (MAX_SPEED - brake * 1000):
-		energy = (((MAX_SPEED - brake * 1000) ** 2) * MASS) / 2
+	if speed > (maxSpeed - brake * 1000):
+		energy = (((maxSpeed - brake * 1000) ** 2) * mass) / 2
 	
-	speed = sqrt((2 * energy) / MASS)
+	speed = sqrt((2 * energy) / mass)
 	
 	emit_signal("speed_change", speed)
 	

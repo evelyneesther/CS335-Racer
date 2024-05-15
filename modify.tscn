@@ -103,9 +103,9 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_yt062")
 item_count = 2
 selected = 0
-popup/item_0/text = "Default Back Wing"
+popup/item_0/text = "Default Spoiler"
 popup/item_0/id = 0
-popup/item_1/text = "Back Front Wing"
+popup/item_1/text = "Aero Spoiler"
 popup/item_1/id = 1
 
 [node name="FrontWingContainer" type="MarginContainer" parent="."]
