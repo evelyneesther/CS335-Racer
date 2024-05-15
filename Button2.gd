@@ -9,7 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
+
 func _physics_process(delta: float) -> void:
 	if is_pressed():
-		get_tree().change_scene_to_file("res://laps.tscn")
+		get_tree().change_scene_to_file("res://overhead.tscn")

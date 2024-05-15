@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc1ql0hde8ixq"]
+[gd_scene load_steps=6 format=3 uid="uid://bc1ql0hde8ixq"]
 
+[ext_resource type="Texture2D" uid="uid://djybr1supmafj" path="res://Art/bg1.jpg" id="1_is7di"]
 [ext_resource type="Script" path="res://ModMenuBackButton.gd" id="1_jteio"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="1_yt062"]
 [ext_resource type="Script" path="res://CarSprite.gd" id="2_tna3j"]
@@ -12,6 +13,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 314.25)
+scale = Vector2(1.87908, 1.66628)
+texture = ExtResource("1_is7di")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 0

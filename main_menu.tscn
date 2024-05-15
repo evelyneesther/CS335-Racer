@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c885xr3rhi2oj"]
+[gd_scene load_steps=7 format=3 uid="uid://c885xr3rhi2oj"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_4tsyk"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="1_shlqa"]
 [ext_resource type="Script" path="res://QuitButton.gd" id="2_4rcga"]
 [ext_resource type="Script" path="res://StartButton.gd" id="4_5dqbd"]
 [ext_resource type="Script" path="res://ModifyButton.gd" id="5_2h33h"]
+[ext_resource type="Texture2D" uid="uid://djybr1supmafj" path="res://Art/bg1.jpg" id="6_8h32b"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,6 +15,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4tsyk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(566, 290)
+scale = Vector2(1.94526, 1.63915)
+texture = ExtResource("6_8h32b")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -29,6 +35,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Quit Button" type="Button" parent="MarginContainer2"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_shlqa")
 theme_override_font_sizes/font_size = 40
 text = "Quit"
