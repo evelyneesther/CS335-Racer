@@ -18,13 +18,14 @@ func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:
 			get_tree().change_scene_to_file("res://main_menu.tscn")
+		elif event.is_action_pressed("reset"):
+			get_tree().change_scene_to_file("res://overhead.tscn")
 
 func _physics_process(delta):	
 	var move_input = Input.get_axis("back", "forward")
 	var rotation_direction = Input.get_axis("left", "right")
 	
 	move_input=hitWall(move_input)
-	
 	applyAcceleration(move_input)
 
 	velocity = transform.x * polarity * speed

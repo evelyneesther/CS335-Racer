@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Player/Character2D.gd" id="2_plmio"]
 [ext_resource type="Script" path="res://Player/PlayerSprite.gd" id="3_5sxpl"]
 [ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_52sov"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="3_cab4r"]
 [ext_resource type="Script" path="res://UI/Speedometer.gd" id="3_sf058"]
 [ext_resource type="Script" path="res://Track/LoopDetector.gd" id="7_4iu2i"]
 [ext_resource type="Script" path="res://Track/Loop Block.gd" id="8_8d42g"]
