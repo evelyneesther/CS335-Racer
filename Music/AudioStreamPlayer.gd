@@ -7,8 +7,7 @@ var music
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	car = String(CarArt.selected_car()).get_slice(".", 0)
-	car = car.get_slice("res://", 1)
-	car = car.get_slice("/", 2)
+	car = car.get_slice("/", 4)
 	
 	if car.casecmp_to("Red -") == 0:
 		musicPath = "res://Music/Base_audio.wav"
