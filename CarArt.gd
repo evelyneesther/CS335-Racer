@@ -9,4 +9,6 @@ func _ready():
 
 	
 func selected_car():
+	
+	print(carCode)
 	return(carPath)

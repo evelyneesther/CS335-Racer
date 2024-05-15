@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oviqem3v3pbx"
-path="res://.godot/imported/Pink-BackWing.png-cbdf3314c69cf533498414c1ec6f46d4.ctex"
+uid="uid://m3dir1m4wq8x"
+path="res://.godot/imported/Pink - FrontWing BackWing.png-30da9ada745229a269f9a751594f3ed9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Pink Car/Pink-BackWing.png"
-dest_files=["res://.godot/imported/Pink-BackWing.png-cbdf3314c69cf533498414c1ec6f46d4.ctex"]
+source_file="res://Art/Pink/Pink - FrontWing BackWing.png"
+dest_files=["res://.godot/imported/Pink - FrontWing BackWing.png-30da9ada745229a269f9a751594f3ed9.ctex"]
 
 [params]
 
