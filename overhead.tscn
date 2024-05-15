@@ -64,11 +64,13 @@ script = SubResource("GDScript_15smr")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 rotation = 1.5708
+scale = Vector2(1, 1)
 texture = ExtResource("3_52sov")
 script = ExtResource("3_5sxpl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(6, -4.8)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ywgp1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
