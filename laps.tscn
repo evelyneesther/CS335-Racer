@@ -1,8 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://tgnbnaepr21w"]
-
-[ext_resource type="Texture2D" path="res://Art/bg1.jpg" id="1_5ab3g"]
-[ext_resource type="FontFile" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
-[gd_scene load_steps=5 format=3 uid="uid://bc5hm6r58dhb3"]
+[gd_scene load_steps=5 format=3 uid="uid://jyb757kdhft2"]
 
 [ext_resource type="Texture2D" uid="uid://djybr1supmafj" path="res://Art/bg1.jpg" id="1_5ab3g"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
