@@ -37,19 +37,19 @@ func _ready():
 			mass=1.2
 			turnSpeed=2.2
 		"W":
-			mass+=.1
-			turnSpeed+=.3
+			mass+=.15
+			turnSpeed+=.5
 	match carCode[2]:
 		"D":
 			accelerationCoifictient=6000
 		"W":
-			mass+=.1
+			mass+=.15
 			accelerationCoifictient=10000
 	match carCode[3]:
 		"D":
 			driftModifier=.5
 		"W":
-			mass+=.1
+			mass+=.15
 			driftModifier=.85
 	print(maxSpeed)
 	print(mass)
