@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bc1ql0hde8ixq"]
 
 [ext_resource type="Script" path="res://ModMenuBackButton.gd" id="1_jteio"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://AeogoPixellated-DYYEd.ttf" id="1_yt062"]
+[ext_resource type="FontFile" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_yt062"]
 [ext_resource type="Script" path="res://CarSprite.gd" id="2_tna3j"]
 [ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_1ofi6"]
 
