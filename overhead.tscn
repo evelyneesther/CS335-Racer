@@ -1,7 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://c5djhsdysur05"]
 
-[ext_resource type="Texture2D" uid="uid://b3med1u1qb2tc" path="res://Art/New-Updated-Track-USETHISONE.png" id="1_nl02y"]
-
+[ext_resource type="Texture2D" uid="uid://d041v6vxrmw6e" path="res://Art/New Updated Track with Stands (USE THIS ONE!!).png" id="1_nl02y"]
 [ext_resource type="Script" path="res://Player/Character2D.gd" id="2_plmio"]
 [ext_resource type="Script" path="res://Player/PlayerSprite.gd" id="3_5sxpl"]
 [ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_52sov"]
@@ -32,9 +31,7 @@ func _process(delta):
 size = Vector2(218.4, 118.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-
 size = Vector2(16344, 4312)
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(6242, 1810)
@@ -49,23 +46,24 @@ position = Vector2(4360, -12888)
 scale = Vector2(24.6909, 24.6909)
 texture = ExtResource("1_nl02y")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(-176.583, 521.974)
+scale = Vector2(0.0405007, 0.0405007)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Map"]
-visible = false
-position = Vector2(-97.28, 255.98)
-scale = Vector2(0.02, 0.02)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-416, -224)
+scale = Vector2(0.985039, 0.985039)
 build_mode = 1
 polygon = PackedVector2Array(22448, 2280, 10992, 2328, 3520, 2328, -7504, 2280, -17152, 2280, -22664, 2176, -23472, 1848, -23784, 904, -23856, -32, -23808, -6640, -23808, -13928, -23808, -22584, -23808, -28680, -23448, -29136, -22664, -29264, -8360, -29288, -7960, -29136, -7808, -28832, -7832, -18216, -7776, -17784, -7472, -17584, -7144, -17504, 16400, -17456, 16984, -17608, 17392, -18016, 17488, -19360, 17488, -27792, 17696, -28376, 18048, -28656, 19120, -28704, 22264, -28760, 33240, -28760, 33696, -28528, 33776, -27896, 33824, -24336, 33848, -17280, 33776, -15168, 33440, -14928, 33192, -14936, 23968, -14888, 23160, -14232, 23032, -13288, 23000, -11448, 23136, 984, 22976, 2096)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-632, 0)
 build_mode = 1
 polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128, -19400, 29208, -19912, 29176, -24720, 28840, -24984, 22784, -24968, 22280, -24888, 22064, -24544, 22048, -19496)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 build_mode = 1
-polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16648, -12888, 17056, -12280, 17088, -10824, 17088, -3528, 16856, -2920, 12584, -2920, -7016, -2952, -17864, -2952, -18648, -3264, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
+polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -120,30 +118,12 @@ text_direction = 1
 script = ExtResource("3_sf058")
 metadata/ignore_rotation = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-416, -224)
-scale = Vector2(0.985039, 0.985039)
-build_mode = 1
-polygon = PackedVector2Array(22448, 2280, 10992, 2328, 3520, 2328, -7504, 2280, -17152, 2280, -22664, 2176, -23472, 1848, -23784, 904, -23856, -32, -23808, -6640, -23808, -13928, -23808, -22584, -23808, -28680, -23448, -29136, -22664, -29264, -8360, -29288, -7960, -29136, -7808, -28832, -7832, -18216, -7776, -17784, -7472, -17584, -7144, -17504, 16400, -17456, 16984, -17608, 17392, -18016, 17488, -19360, 17488, -27792, 17696, -28376, 18048, -28656, 19120, -28704, 22264, -28760, 33240, -28760, 33696, -28528, 33776, -27896, 33824, -24336, 33848, -17280, 33776, -15168, 33440, -14928, 33192, -14936, 23968, -14888, 23160, -14232, 23032, -13288, 23000, -11448, 23136, 984, 22976, 2096)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-632, 0)
-build_mode = 1
-polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128, -19400, 29208, -19912, 29176, -24720, 28840, -24984, 22784, -24968, 22280, -24888, 22064, -24544, 22048, -19496)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
-
 [node name="Loop Detector" type="Area2D" parent="."]
 position = Vector2(17128, -17928)
 script = ExtResource("7_4iu2i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
 position = Vector2(7698, -8060)
-
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
