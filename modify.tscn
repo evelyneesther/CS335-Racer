@@ -85,8 +85,10 @@ popup/item_1/text = "Boosted Blue"
 popup/item_1/id = 1
 popup/item_2/text = "Performance Pink"
 popup/item_2/id = 2
+popup/item_2/disabled = true
 popup/item_3/text = "Gearshift Green"
 popup/item_3/id = 3
+popup/item_3/disabled = true
 popup/item_4/text = "Okay Orange"
 popup/item_4/id = 4
 

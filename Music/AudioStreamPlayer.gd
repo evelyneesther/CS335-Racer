@@ -6,13 +6,11 @@ var music
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	car = CarArt.car_code()
+	car = String(CarArt.carCode)
 	
-	print(car)
+	musicPath = String("res://Music/" + car + ".mp3")
 	
-	musicPath = String("res://Music/"+ car + ".mp3")
-	
-	#music = load(musicPath)
+	music = load(musicPath)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
