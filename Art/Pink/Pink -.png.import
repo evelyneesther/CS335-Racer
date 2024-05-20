@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ov7fp47nb6m"
-path="res://.godot/imported/Orange - NoMods.png-38ce0e34255e1e1afc88caec7f261893.ctex"
+uid="uid://seoxxrchavls"
+path="res://.godot/imported/Pink -.png-82c6eab1803933978d5a699672850bc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Orange/Orange - NoMods.png"
-dest_files=["res://.godot/imported/Orange - NoMods.png-38ce0e34255e1e1afc88caec7f261893.ctex"]
+source_file="res://Art/Pink/Pink -.png"
+dest_files=["res://.godot/imported/Pink -.png-82c6eab1803933978d5a699672850bc9.ctex"]
 
 [params]
 

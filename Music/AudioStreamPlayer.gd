@@ -18,7 +18,7 @@ func _ready():
 	elif car.casecmp_to("Red - FrontWing SideWing") == 0:
 		musicPath = "res://Music/FrontWing SideWing.wav"
 	
-	music = load(musicPath)
+	#music = load(musicPath)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

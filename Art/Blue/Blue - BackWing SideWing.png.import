@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0tofeqgwkpff"
-path="res://.godot/imported/Pink-SideWing.png-0c0f53798aa50bb0a51426179bb12410.ctex"
+uid="uid://chb4sgmokrun"
+path="res://.godot/imported/Blue - BackWing SideWing.png-4772e894671378a02af506c5a91c9847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Pink Car/Pink-SideWing.png"
-dest_files=["res://.godot/imported/Pink-SideWing.png-0c0f53798aa50bb0a51426179bb12410.ctex"]
+source_file="res://Art/Blue/Blue - BackWing SideWing.png"
+dest_files=["res://.godot/imported/Blue - BackWing SideWing.png-4772e894671378a02af506c5a91c9847.ctex"]
 
 [params]
 

@@ -76,3 +76,27 @@ func _on_dorsal_wing_button_item_selected(index):
 	self.texture=load(selected_car())
 	
 	pass # Replace with function body.
+
+
+func _on_back_wing_button_item_selected(index):
+	if index==0:
+		back=""
+	elif index==1:
+		back="BackWing "
+	self.texture=load(selected_car())
+	pass # Replace with function body.
+
+
+func _on_color_button_item_selected(index):
+	if index==0:
+		color="Red"
+	elif index==1:
+		color="Blue"
+	elif index==2:
+		color="Pink"
+	elif index==3:
+		color="Green"
+	elif index==4:
+		color="Orange"
+	self.texture=load(selected_car())
+	pass # Replace with function body.
