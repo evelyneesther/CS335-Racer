@@ -17,9 +17,12 @@ var polarity = 0
 
 var brake = 0
 
+var grassMult=false
+
 signal speed_change
 
 func _ready():
+	grassMult=false
 	var carCode=CarArt.carCode
 	match carCode[0]:
 		"R":
@@ -101,7 +104,8 @@ func applyAcceleration(move_input):
 		energy = (((maxSpeed - brake * 1000) ** 2) * mass) / 2
 	
 	speed = sqrt((2 * energy) / mass)
-	
+	if grassMult==true:
+		speed*=.8
 	emit_signal("speed_change", speed)
 	
 
@@ -139,4 +143,20 @@ func printOutputs():
 	print(energy)
 	print()
 
+
+
+func _on_grass_body_entered(body):
+	print("Entered")
+	print(self)
+	if body==self:
+		grassMult=true
+		print(grassMult)
+	pass # Replace with function body.
+
+
+func _on_grass_body_exited(body):
+	if body==self:
+		grassMult=false
+		print(grassMult)
+	pass # Replace with function body.
 
