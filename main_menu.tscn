@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/MainMenu.gd" id="1_4tsyk"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_shlqa"]
 [ext_resource type="Script" path="res://UI/QuitButton.gd" id="2_4rcga"]
-[ext_resource type="Texture2D" uid="uid://do08xktmnv1q2" path="res://Art/Title Screen.png" id="2_5w3ms"]
+[ext_resource type="Texture2D" path="res://Art/Title Screen.png" id="2_5w3ms"]
 [ext_resource type="Script" path="res://UI/StartButton.gd" id="4_5dqbd"]
 [ext_resource type="Script" path="res://UI/ModifyButton.gd" id="5_2h33h"]
 
