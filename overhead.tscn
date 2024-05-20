@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=24 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Texture2D" path="res://Art/New Updated Track with Stands (USE THIS ONE!!).png" id="1_nl02y"]
 [ext_resource type="Script" path="res://Player/Character2D.gd" id="2_plmio"]
@@ -11,6 +11,27 @@
 [ext_resource type="Script" path="res://Track/NewLapDetector.gd" id="9_bak2g"]
 [ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Art/traffic cones.png" id="9_v4fai"]
 [ext_resource type="Script" path="res://Music/AudioStreamPlayer.gd" id="11_lfaww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gsgn"]
+size = Vector2(2561.35, 271.557)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2b0r"]
+size = Vector2(241.06, 1596.7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wod2s"]
+size = Vector2(725.004, 230.692)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eutnp"]
+size = Vector2(983.156, 472.32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lt25"]
+size = Vector2(823.826, 123.568)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tak4e"]
+size = Vector2(159.249, 742.949)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxcyv"]
+size = Vector2(535.501, 708.52)
 
 [sub_resource type="GDScript" id="GDScript_15smr"]
 script/source = "extends Camera2D
@@ -31,7 +52,7 @@ func _process(delta):
 size = Vector2(218.4, 118.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(16344, 4312)
+size = Vector2(20660, 5264)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(6242, 1810)
@@ -47,6 +68,7 @@ scale = Vector2(24.6909, 24.6909)
 texture = ExtResource("1_nl02y")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+visible = false
 position = Vector2(-176.583, 521.974)
 scale = Vector2(0.0405007, 0.0405007)
 
@@ -54,7 +76,7 @@ scale = Vector2(0.0405007, 0.0405007)
 position = Vector2(-416, -224)
 scale = Vector2(0.985039, 0.985039)
 build_mode = 1
-polygon = PackedVector2Array(22448, 2280, 10992, 2328, 3520, 2328, -7504, 2280, -17152, 2280, -22664, 2176, -23472, 1848, -23784, 904, -23856, -32, -23808, -6640, -23808, -13928, -23808, -22584, -23808, -28680, -23448, -29136, -22664, -29264, -8360, -29288, -7960, -29136, -7808, -28832, -7832, -18216, -7776, -17784, -7472, -17584, -7144, -17504, 16400, -17456, 16984, -17608, 17392, -18016, 17488, -19360, 17488, -27792, 17696, -28376, 18048, -28656, 19120, -28704, 22264, -28760, 33240, -28760, 33696, -28528, 33776, -27896, 33824, -24336, 33848, -17280, 33776, -15168, 33440, -14928, 33192, -14936, 23968, -14888, 23160, -14232, 23032, -13288, 23000, -11448, 23136, 984, 22976, 2096)
+polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30187.7, -2292.31, -30024.2, -7974.32, -30297.3, -18354.6, -29765.4, -27022.3, -29151.2, -33898.2, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 34878.9, -12795.5, 33491.1, -11581.3, 33924.6, 1514.65, 34271.8, 8799.66)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(-632, 0)
@@ -64,6 +86,36 @@ polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128,
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 build_mode = 1
 polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
+
+[node name="Grass" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(-107.975, 734.015)
+shape = SubResource("RectangleShape2D_3gsgn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(-1272.74, -114.496)
+shape = SubResource("RectangleShape2D_s2b0r")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(-798.128, -785.877)
+shape = SubResource("RectangleShape2D_wod2s")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(-1.74153, -434.371)
+shape = SubResource("RectangleShape2D_eutnp")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(866.048, -707.609)
+shape = SubResource("RectangleShape2D_8lt25")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(1239.53, -381.475)
+shape = SubResource("RectangleShape2D_tak4e")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Sprite2D/Grass"]
+position = Vector2(1012.96, 265.887)
+shape = SubResource("RectangleShape2D_qxcyv")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -123,7 +175,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_4iu2i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(7698, -8060)
+position = Vector2(8326, -8369)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
@@ -151,6 +203,8 @@ shape = SubResource("RectangleShape2D_dabs5")
 volume_db = 10.0
 script = ExtResource("11_lfaww")
 
+[connection signal="area_entered" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_area_entered"]
+[connection signal="area_exited" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_area_exited"]
 [connection signal="speed_change" from="CharacterBody2D" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
 [connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]

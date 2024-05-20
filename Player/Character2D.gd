@@ -17,6 +17,8 @@ var polarity = 0
 
 var brake = 0
 
+var grassMult=false
+
 signal speed_change
 
 func _ready():
@@ -101,7 +103,8 @@ func applyAcceleration(move_input):
 		energy = (((maxSpeed - brake * 1000) ** 2) * mass) / 2
 	
 	speed = sqrt((2 * energy) / mass)
-	
+	if grassMult==true:
+		speed*=.8
 	emit_signal("speed_change", speed)
 	
 
@@ -140,3 +143,16 @@ func printOutputs():
 	print()
 
 
+
+
+func _on_grass_area_entered(area):
+		grassMult=true
+		print(grassMult)
+		pass # Replace with function body.
+
+
+func _on_grass_area_exited(area):
+	
+	grassMult=false
+	print(grassMult)
+	pass # Replace with function body.
