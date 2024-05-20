@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc1ql0hde8ixq"]
+[gd_scene load_steps=7 format=3 uid="uid://bc1ql0hde8ixq"]
 
-
-[ext_resource type="Texture2D" uid="uid://djybr1supmafj" path="res://Art/bg1.jpg" id="1_is7di"]
 [ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="1_jteio"]
+[ext_resource type="Texture2D" uid="uid://n8hxuritvdxu" path="res://Art/Mod Car Screen.png" id="1_ksbf4"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_yt062"]
 [ext_resource type="Script" path="res://UI/CarSprite.gd" id="2_tna3j"]
 [ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Art/Red/Red -.png" id="3_1ofi6"]
+[ext_resource type="Texture2D" uid="uid://dxui7yilq7s8j" path="res://Art/Buttons/Back Button.png" id="5_l7c3s"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,8 +17,8 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(578, 314.25)
-scale = Vector2(1.87908, 1.66628)
-texture = ExtResource("1_is7di")
+scale = Vector2(1.7, 1.55)
+texture = ExtResource("1_ksbf4")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -28,7 +28,7 @@ offset_right = 768.0
 offset_bottom = 160.0
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer2"]
-position = Vector2(151.375, 192.5)
+position = Vector2(185, 192)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_1ofi6")
 script = ExtResource("2_tna3j")
@@ -46,7 +46,7 @@ theme_override_constants/margin_right = 150
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_yt062")
 theme_override_font_sizes/font_size = 20
-text = "Back"
+icon = ExtResource("5_l7c3s")
 script = ExtResource("1_jteio")
 
 [node name="DorsalWingContainer" type="MarginContainer" parent="."]
