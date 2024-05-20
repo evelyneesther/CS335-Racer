@@ -19,3 +19,6 @@ func _unhandled_input(event):
 	
 func selected_car():
 	return(carPath)
+
+func car_code():
+	return(carCode)
