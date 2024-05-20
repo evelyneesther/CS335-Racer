@@ -22,6 +22,7 @@ var grassMult=false
 signal speed_change
 
 func _ready():
+	grassMult=false
 	var carCode=CarArt.carCode
 	match carCode[0]:
 		"R":
@@ -104,7 +105,7 @@ func applyAcceleration(move_input):
 	
 	speed = sqrt((2 * energy) / mass)
 	if grassMult==true:
-		speed*=.8
+		speed*=.7
 	emit_signal("speed_change", speed)
 	
 
@@ -144,15 +145,15 @@ func printOutputs():
 
 
 
-
-func _on_grass_area_entered(area):
+func _on_grass_body_entered(body):
+	if body==self:
 		grassMult=true
 		print(grassMult)
-		pass # Replace with function body.
+	pass # Replace with function body.
 
 
-func _on_grass_area_exited(area):
-	
-	grassMult=false
-	print(grassMult)
+func _on_grass_body_exited(body):
+	if body==self:
+		grassMult=false
+		print(grassMult)
 	pass # Replace with function body.

@@ -68,7 +68,6 @@ scale = Vector2(24.6909, 24.6909)
 texture = ExtResource("1_nl02y")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
-visible = false
 position = Vector2(-176.583, 521.974)
 scale = Vector2(0.0405007, 0.0405007)
 
@@ -76,7 +75,7 @@ scale = Vector2(0.0405007, 0.0405007)
 position = Vector2(-416, -224)
 scale = Vector2(0.985039, 0.985039)
 build_mode = 1
-polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30187.7, -2292.31, -30024.2, -7974.32, -30297.3, -18354.6, -29765.4, -27022.3, -29151.2, -33898.2, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 34878.9, -12795.5, 33491.1, -11581.3, 33924.6, 1514.65, 34271.8, 8799.66)
+polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30187.7, -2292.31, -30024.2, -7974.32, -30297.3, -18354.6, -29765.4, -27022.3, -29151.2, -33898.2, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 33593.6, -11303.1, 23087.4, -11071.7, 33831.2, -10202.7, 34271.8, 8799.66)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(-632, 0)
@@ -203,8 +202,10 @@ shape = SubResource("RectangleShape2D_dabs5")
 volume_db = 10.0
 script = ExtResource("11_lfaww")
 
-[connection signal="area_entered" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_area_entered"]
-[connection signal="area_exited" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_area_exited"]
+[connection signal="area_shape_entered" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_area_shape_entered"]
+[connection signal="area_shape_exited" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_area_shape_exited"]
+[connection signal="body_entered" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_body_entered"]
+[connection signal="body_exited" from="Sprite2D/Grass" to="CharacterBody2D" method="_on_grass_body_exited"]
 [connection signal="speed_change" from="CharacterBody2D" to="CanvasLayer/TextEdit" method="_on_character_body_2d_speed_change"]
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
 [connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
