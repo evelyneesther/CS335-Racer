@@ -16,3 +16,7 @@ func _on_character_body_2d_speed_change(speed):
 	pass # Replace with function body.
 
 # Replace with function body.
+
+
+func _on_vehicle_speed_change(speed):
+	number=int(speed)/15
