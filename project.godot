@@ -22,7 +22,7 @@ buses/default_bus_layout="res://Resources/Music/default_bus_layout.tres"
 [autoload]
 
 ManagerGame="*res://Resources/Scenes/ManagerGame.tscn"
-CarArt="*res://Resources/Scripts/CarArt.gd"
+CarArt="*res://Resources/Scripts/Globals/CarArt.gd"
 
 [display]
 
