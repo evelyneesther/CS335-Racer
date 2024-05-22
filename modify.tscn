@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://n8hxuritvdxu" path="res://Art/Mod Car Screen.png" id="1_ksbf4"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_yt062"]
 [ext_resource type="Script" path="res://UI/CarSprite.gd" id="2_tna3j"]
-[ext_resource type="Texture2D" path="res://Art/Red/Red -.png" id="3_1ofi6"]
+[ext_resource type="Texture2D" uid="uid://c1mpv487bxyab" path="res://Art/Red/Red -.png" id="3_1ofi6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,8 +27,8 @@ offset_right = 768.0
 offset_bottom = 160.0
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer2"]
-position = Vector2(185, 192)
-scale = Vector2(1.75, 1.75)
+position = Vector2(207, 186)
+scale = Vector2(1.55729, 1.47313)
 texture = ExtResource("3_1ofi6")
 script = ExtResource("2_tna3j")
 
