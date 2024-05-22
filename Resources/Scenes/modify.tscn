@@ -52,6 +52,7 @@ offset_right = 535.0
 offset_bottom = 341.0
 
 [node name="DorsalWingButton" type="OptionButton" parent="DorsalWingContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_3qie8")
@@ -70,6 +71,7 @@ offset_right = 591.0
 offset_bottom = 200.0
 
 [node name="ColorButton" type="OptionButton" parent="ColorContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_3qie8")
@@ -94,6 +96,7 @@ offset_right = 591.0
 offset_bottom = 408.0
 
 [node name="BackWingButton" type="OptionButton" parent="BackWingContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_3qie8")
@@ -112,6 +115,7 @@ offset_right = 364.0
 offset_bottom = 268.0
 
 [node name="FrontWingButton" type="OptionButton" parent="FrontWingContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_3qie8")
