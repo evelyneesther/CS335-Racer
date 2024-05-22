@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://jyb757kdhft2"]
 
-[ext_resource type="Script" path="res://Resources/UI/laps.gd" id="1_g4xaf"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/laps.gd" id="1_g4xaf"]
 [ext_resource type="Texture2D" uid="uid://djybr1supmafj" path="res://Resources/Art/bg1.jpg" id="2_qlqpi"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/UI/AeogoPixellated-DYYEd.ttf" id="3_abnq6"]
-[ext_resource type="Script" path="res://Resources/UI/ModMenuBackButton.gd" id="4_ocnj4"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="3_abnq6"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="4_ocnj4"]
 
 [node name="laps" type="Control"]
 layout_mode = 3

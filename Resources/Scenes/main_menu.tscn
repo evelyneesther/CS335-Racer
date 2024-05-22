@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c885xr3rhi2oj"]
 
-[ext_resource type="Script" path="res://Resources/UI/MainMenu.gd" id="1_sv5fb"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/MainMenu.gd" id="1_sv5fb"]
 [ext_resource type="Texture2D" uid="uid://do08xktmnv1q2" path="res://Resources/Art/Title Screen.png" id="2_g6c6x"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/UI/AeogoPixellated-DYYEd.ttf" id="3_xdjof"]
-[ext_resource type="Script" path="res://Resources/UI/QuitButton.gd" id="4_h1dsr"]
-[ext_resource type="Script" path="res://Resources/UI/StartButton.gd" id="5_7j0gv"]
-[ext_resource type="Script" path="res://Resources/UI/ModifyButton.gd" id="6_325e5"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="3_xdjof"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/QuitButton.gd" id="4_h1dsr"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/StartButton.gd" id="5_7j0gv"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/ModifyButton.gd" id="6_325e5"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3

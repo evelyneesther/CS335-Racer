@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dnmqvgxeagnqt"
-path="res://.godot/imported/AeogoPixellated-DYYEd.ttf-6f983e6baa6321de56f2f7e33587318a.fontdata"
+path="res://.godot/imported/AeogoPixellated-DYYEd.ttf-ee4d8bced72abe4fc10fb3e36fe15c31.fontdata"
 
 [deps]
 
-source_file="res://Resources/UI/AeogoPixellated-DYYEd.ttf"
-dest_files=["res://.godot/imported/AeogoPixellated-DYYEd.ttf-6f983e6baa6321de56f2f7e33587318a.fontdata"]
+source_file="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf"
+dest_files=["res://.godot/imported/AeogoPixellated-DYYEd.ttf-ee4d8bced72abe4fc10fb3e36fe15c31.fontdata"]
 
 [params]
 

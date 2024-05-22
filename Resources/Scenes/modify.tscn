@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://n8hxuritvdxu" path="res://Resources/Art/Mod Car Screen.png" id="1_uqo2x"]
 [ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Resources/Art/Red/Red -.png" id="2_jfttj"]
-[ext_resource type="Script" path="res://Resources/UI/CarSprite.gd" id="3_jkr0n"]
-[ext_resource type="Script" path="res://Resources/UI/ModMenuBackButton.gd" id="4_pnntv"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/UI/AeogoPixellated-DYYEd.ttf" id="5_3qie8"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/CarSprite.gd" id="3_jkr0n"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="4_pnntv"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="5_3qie8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
