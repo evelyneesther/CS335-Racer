@@ -18,8 +18,6 @@ func _ready():
 
 
 func _on_new_lap_detector_body_entered(body):
-	print("Has Looped:")
-	print(has_looped)
 	if has_looped==false:
 		return
 	has_looped=false
@@ -37,5 +35,4 @@ func _on_new_lap_detector_body_entered(body):
 
 
 func _on_loop_detector_player_detected():
-	print("Loop Detected, EndZone Enabled")
 	has_looped=true

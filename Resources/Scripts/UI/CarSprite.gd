@@ -92,7 +92,6 @@ func selected_car():
 	carstr=carstr.strip_edges()
 	
 	CarArt.carPath=carstr+".png"
-	print(CarArt.selected_car())
 	return(carstr+".png")
 
 func _on_front_wing_button_item_selected(index):

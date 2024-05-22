@@ -54,11 +54,6 @@ func _ready():
 		"W":
 			mass+=.15
 			driftModifier=.85
-	print(maxSpeed)
-	print(mass)
-	
-			
-			
 	pass
 	
 func _unhandled_input(event):
@@ -146,17 +141,13 @@ func printOutputs():
 
 
 func _on_grass_body_entered(body):
-	print("Entered")
-	print(self)
 	if body==self:
 		grassMult=true
-		print(grassMult)
 	pass # Replace with function body.
 
 
 func _on_grass_body_exited(body):
 	if body==self:
 		grassMult=false
-		print(grassMult)
 	pass # Replace with function body.
 
