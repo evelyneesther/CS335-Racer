@@ -1,0 +1,193 @@
+[gd_scene load_steps=23 format=3 uid="uid://c5djhsdysur05"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
+[ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/UI/UI.tscn" id="2_ax68v"]
+[ext_resource type="Texture2D" uid="uid://bojum2yk5ie0q" path="res://Resources/Art/New Updated Track with Stands (USE THIS ONE!!).png" id="3_cbx8u"]
+[ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_h3lf8"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/UI/AeogoPixellated-DYYEd.ttf" id="5_odxm5"]
+[ext_resource type="Script" path="res://Resources/UI/Speedometer.gd" id="6_cr3gc"]
+[ext_resource type="Script" path="res://Resources/Scripts/Track/LoopDetector.gd" id="7_h1y4w"]
+[ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
+[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/traffic cones.png" id="9_pyank"]
+[ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
+[ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gsgn"]
+size = Vector2(58519, 6322)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2b0r"]
+size = Vector2(6322, 45875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wod2s"]
+size = Vector2(60313, 8031)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eutnp"]
+size = Vector2(24262, 10679)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lt25"]
+size = Vector2(14096, 23237)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tak4e"]
+size = Vector2(4186, 23123.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxcyv"]
+size = Vector2(34343, 8713)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ximso"]
+size = Vector2(5809, 21272)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
+size = Vector2(20660, 5264)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
+size = Vector2(6242, 1810)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dabs5"]
+size = Vector2(17360, 14252)
+
+[node name="Overhead" type="Node2D"]
+script = ExtResource("1_r0xw4")
+
+[node name="UI" parent="." instance=ExtResource("2_ax68v")]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(4360, -12888)
+scale = Vector2(24.6909, 24.6909)
+texture = ExtResource("3_cbx8u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map"]
+position = Vector2(-176.583, 521.974)
+scale = Vector2(0.0405007, 0.0405007)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+position = Vector2(-416, -224)
+scale = Vector2(0.985039, 0.985039)
+build_mode = 1
+polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30187.7, -2292.31, -30024.2, -7974.32, -30297.3, -18354.6, -29765.4, -27022.3, -29151.2, -33898.2, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 33593.6, -11303.1, 23087.4, -11071.7, 33831.2, -10202.7, 34271.8, 8799.66)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+position = Vector2(-632, 0)
+build_mode = 1
+polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128, -19400, 29208, -19912, 29176, -24720, 28840, -24984, 22784, -24968, 22280, -24888, 22064, -24544, 22048, -19496)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
+
+[node name="Grass" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Grass"]
+position = Vector2(4492.5, 5597)
+shape = SubResource("RectangleShape2D_3gsgn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Grass"]
+position = Vector2(-27244, -13923.5)
+shape = SubResource("RectangleShape2D_s2b0r")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Grass"]
+position = Vector2(5987.5, -32675.5)
+shape = SubResource("RectangleShape2D_wod2s")
+
+[node name="Sprite2D_Grass#CollisionShape2D4" type="CollisionShape2D" parent="Grass"]
+position = Vector2(4279, -23235.5)
+shape = SubResource("RectangleShape2D_eutnp")
+
+[node name="Sprite2D_Grass#CollisionShape2D5" type="CollisionShape2D" parent="Grass"]
+position = Vector2(29780, -2860.5)
+shape = SubResource("RectangleShape2D_8lt25")
+
+[node name="Sprite2D_Grass#CollisionShape2D6" type="CollisionShape2D" parent="Grass"]
+position = Vector2(35077, -12314.5)
+shape = SubResource("RectangleShape2D_tak4e")
+
+[node name="Sprite2D_Grass#CollisionShape2D7" type="CollisionShape2D" parent="Grass"]
+position = Vector2(-1359.5, -8242.5)
+shape = SubResource("RectangleShape2D_qxcyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass"]
+position = Vector2(-15711.5, -14436)
+shape = SubResource("RectangleShape2D_ximso")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Vehicle" parent="." instance=ExtResource("4_h3lf8")]
+collision_layer = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+layout_direction = 1
+offset_left = 940.0
+offset_top = 549.0
+offset_right = 1157.0
+offset_bottom = 637.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_odxm5")
+theme_override_font_sizes/font_size = 75
+text = "0"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+text_direction = 1
+script = ExtResource("6_cr3gc")
+metadata/ignore_rotation = true
+
+[node name="Loop Detector" type="Area2D" parent="."]
+position = Vector2(17128, -17928)
+script = ExtResource("7_h1y4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
+position = Vector2(8326, -8369)
+shape = SubResource("RectangleShape2D_2vg0w")
+
+[node name="LoopBlock" type="StaticBody2D" parent="."]
+position = Vector2(16832, -12648)
+script = ExtResource("8_1ly6n")
+
+[node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
+position = Vector2(2408, 1344)
+shape = SubResource("RectangleShape2D_upce0")
+
+[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
+position = Vector2(2592, 1320)
+scale = Vector2(32, 32)
+texture = ExtResource("9_pyank")
+
+[node name="NewLapDetector" type="Area2D" parent="."]
+position = Vector2(-8348, -168)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("10_iqxyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
+shape = SubResource("RectangleShape2D_dabs5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 10.0
+script = ExtResource("11_ea1w1")
+
+[node name="FinishLine" type="Node2D" parent="."]
+
+[connection signal="area_shape_entered" from="Grass" to="Vehicle" method="_on_grass_area_shape_entered"]
+[connection signal="body_entered" from="Grass" to="Vehicle" method="_on_grass_body_entered"]
+[connection signal="body_exited" from="Grass" to="Vehicle" method="_on_grass_body_exited"]
+[connection signal="body_shape_entered" from="Grass" to="Vehicle" method="_on_grass_body_shape_entered"]
+[connection signal="speed_change" from="Vehicle" to="CanvasLayer/TextEdit" method="_on_vehicle_speed_change"]
+[connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
+[connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
+[connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
+[connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
+[connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
