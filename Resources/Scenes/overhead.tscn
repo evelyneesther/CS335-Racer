@@ -187,6 +187,7 @@ script = ExtResource("11_ea1w1")
 [connection signal="body_shape_entered" from="Grass" to="Vehicle" method="_on_grass_body_shape_entered"]
 [connection signal="speed_change" from="Vehicle" to="CanvasLayer/TextEdit" method="_on_vehicle_speed_change"]
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
+[connection signal="player_detected" from="Loop Detector" to="." method="_on_loop_detector_player_detected"]
 [connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
