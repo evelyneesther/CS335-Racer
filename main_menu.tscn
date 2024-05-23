@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c885xr3rhi2oj"]
+[gd_scene load_steps=7 format=3 uid="uid://bc2l438g4exkk"]
 
 [ext_resource type="Script" path="res://UI/MainMenu.gd" id="1_4tsyk"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_shlqa"]
@@ -17,8 +17,8 @@ grow_vertical = 2
 script = ExtResource("1_4tsyk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(580, 340)
-scale = Vector2(1.66, 1.6)
+position = Vector2(580, 330.5)
+scale = Vector2(1.66, 1.55476)
 texture = ExtResource("2_5w3ms")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]

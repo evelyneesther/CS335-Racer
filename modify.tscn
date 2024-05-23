@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc1ql0hde8ixq"]
+[gd_scene load_steps=6 format=3 uid="uid://de84v36fetd5a"]
 
 [ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="1_jteio"]
 [ext_resource type="Texture2D" uid="uid://n8hxuritvdxu" path="res://Art/Mod Car Screen.png" id="1_ksbf4"]
@@ -15,8 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(578, 314.25)
-scale = Vector2(1.7, 1.55)
+position = Vector2(578, 319.875)
+scale = Vector2(1.7, 1.52321)
 texture = ExtResource("1_ksbf4")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -27,7 +27,7 @@ offset_right = 768.0
 offset_bottom = 160.0
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer2"]
-position = Vector2(207, 186)
+position = Vector2(232, 207)
 scale = Vector2(1.55729, 1.47313)
 texture = ExtResource("3_1ofi6")
 script = ExtResource("2_tna3j")
