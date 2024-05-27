@@ -14,3 +14,9 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Music raws
+Music/raws/*
+
+#Music Backups
+Resources/Music/Interactive_Racer_Backups/*
