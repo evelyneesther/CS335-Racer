@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cgi6qutc5rjsm"]
 
-[ext_resource type="Script" path="res://UI/MainMenu.gd" id="1_4tsyk"]
-[ext_resource type="FontFile" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_shlqa"]
-[ext_resource type="Script" path="res://UI/QuitButton.gd" id="2_4rcga"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/MainMenu.gd" id="1_4tsyk"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="1_shlqa"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/QuitButton.gd" id="2_4rcga"]
 [ext_resource type="Texture2D" uid="uid://daqdy2fvaha1" path="res://Resources/Art/title screen 1.png" id="2_5w3ms"]
-[ext_resource type="Script" path="res://UI/StartButton.gd" id="4_5dqbd"]
-[ext_resource type="Script" path="res://UI/ModifyButton.gd" id="5_2h33h"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/StartButton.gd" id="4_5dqbd"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/ModifyButton.gd" id="5_2h33h"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -17,8 +17,8 @@ grow_vertical = 2
 script = ExtResource("1_4tsyk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(580, 330.5)
-scale = Vector2(1.66, 1.55476)
+position = Vector2(574, 323.5)
+scale = Vector2(1.64286, 1.55)
 texture = ExtResource("2_5w3ms")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckykaigc2locu"]
 
-[ext_resource type="FontFile" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
-[ext_resource type="Script" path="res://UI/LapScreenStartButton.gd" id="1_gltdd"]
-[ext_resource type="Texture2D" uid="uid://b128uubmud1xq" path="res://Resources/Art/Mod Car Screen-export.png" id="1_han30"]
-[ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="3_k6rq8"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/LapScreenStartButton.gd" id="1_gltdd"]
+[ext_resource type="Texture2D" uid="uid://ccpe4ia5emiu3" path="res://Resources/Art/Actual Number of Laps Screen.png" id="1_wu0in"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="3_k6rq8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,16 +17,16 @@ grow_vertical = 2
 layout_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
-position = Vector2(576.5, 321.5)
-scale = Vector2(1.65286, 1.54524)
-texture = ExtResource("1_han30")
+position = Vector2(576.5, 323.5)
+scale = Vector2(1.65286, 1.55476)
+texture = ExtResource("1_wu0in")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 220.0
-offset_top = 298.0
-offset_right = 921.0
-offset_bottom = 508.0
+offset_left = 257.0
+offset_top = 150.0
+offset_right = 958.0
+offset_bottom = 360.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
