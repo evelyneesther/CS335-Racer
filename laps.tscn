@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://jyb757kdhft2"]
 
-[ext_resource type="Texture2D" uid="uid://djybr1supmafj" path="res://Art/bg1.jpg" id="1_5ab3g"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
 [ext_resource type="Script" path="res://UI/LapScreenStartButton.gd" id="1_gltdd"]
+[ext_resource type="Texture2D" uid="uid://bpqobo4arc4ob" path="res://Art/Actual Number of Laps Screen.png" id="1_han30"]
 [ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="3_k6rq8"]
 
 [node name="Control" type="Control"]
@@ -17,16 +17,16 @@ grow_vertical = 2
 layout_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
-position = Vector2(581, 290)
-scale = Vector2(1.87745, 1.62818)
-texture = ExtResource("1_5ab3g")
+position = Vector2(576.5, 321.5)
+scale = Vector2(1.65286, 1.54524)
+texture = ExtResource("1_han30")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 20.0
-offset_right = 941.0
-offset_bottom = 230.0
+offset_left = 220.0
+offset_top = 298.0
+offset_right = 921.0
+offset_bottom = 508.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
@@ -36,7 +36,6 @@ theme_override_constants/margin_bottom = 80
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_gako3")
 theme_override_font_sizes/font_size = 40
-text = "NUMBER OF LAPS?"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Panel"]
 layout_mode = 1
@@ -57,10 +56,10 @@ value = 1.0
 layout_mode = 2
 anchor_right = 0.228
 anchor_bottom = 0.41
-offset_left = 347.0
-offset_top = 270.0
-offset_right = 677.88
-offset_bottom = 403.6
+offset_left = 327.0
+offset_top = 355.0
+offset_right = 736.0
+offset_bottom = 538.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 20
@@ -70,7 +69,6 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_gako3")
 theme_override_font_sizes/font_size = 40
-text = "START"
 script = ExtResource("1_gltdd")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
