@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Resources/Art/Other Track Layout.png.import
-uid="uid://blgahs1cmk3nt"
-path="res://.godot/imported/Other Track Layout.png-acdf28a413c5add4000372530752d5e4.ctex"
-========
-uid="uid://xsu0avh70xrk"
-path="res://.godot/imported/Orange - Reverse.png-32151a27a0aab2c83254d66329a30605.ctex"
->>>>>>>> main:Resources/Art/Orange/Orange - Reverse.png.import
+uid="uid://dng1gunjdsews"
+path="res://.godot/imported/Other Track Layout.png-ec3f0687163cfbacc71c338534d28595.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Resources/Art/Other Track Layout.png.import
-source_file="res://Art/Other Track Layout.png"
-dest_files=["res://.godot/imported/Other Track Layout.png-acdf28a413c5add4000372530752d5e4.ctex"]
-========
-source_file="res://Resources/Art/Orange/Orange - Reverse.png"
-dest_files=["res://.godot/imported/Orange - Reverse.png-32151a27a0aab2c83254d66329a30605.ctex"]
->>>>>>>> main:Resources/Art/Orange/Orange - Reverse.png.import
+source_file="res://Resources/Art/Other Track Layout.png"
+dest_files=["res://.godot/imported/Other Track Layout.png-ec3f0687163cfbacc71c338534d28595.ctex"]
 
 [params]
 
