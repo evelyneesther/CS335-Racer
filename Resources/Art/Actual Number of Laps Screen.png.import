@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Resources/Art/Actual Number of Laps Screen.png.import
-uid="uid://b6f2ln48uelvv"
-path="res://.godot/imported/Actual Number of Laps Screen.png-b9fac8788fe67553f82520c57905a9d4.ctex"
-========
-uid="uid://cc8f7ol0ug30k"
-path="res://.godot/imported/Pink - Reverse.png-d42b91af3cad0826fc71b51bfaf16fce.ctex"
->>>>>>>> main:Resources/Art/Pink/Pink - Reverse.png.import
+uid="uid://ccpe4ia5emiu3"
+path="res://.godot/imported/Actual Number of Laps Screen.png-d8d8d4210227172031d7652c5a04f656.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Resources/Art/Actual Number of Laps Screen.png.import
-source_file="res://Art/Actual Number of Laps Screen.png"
-dest_files=["res://.godot/imported/Actual Number of Laps Screen.png-b9fac8788fe67553f82520c57905a9d4.ctex"]
-========
-source_file="res://Resources/Art/Pink/Pink - Reverse.png"
-dest_files=["res://.godot/imported/Pink - Reverse.png-d42b91af3cad0826fc71b51bfaf16fce.ctex"]
->>>>>>>> main:Resources/Art/Pink/Pink - Reverse.png.import
+source_file="res://Resources/Art/Actual Number of Laps Screen.png"
+dest_files=["res://.godot/imported/Actual Number of Laps Screen.png-d8d8d4210227172031d7652c5a04f656.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc460bkmlrmwi"
-path="res://.godot/imported/Other Track Layout.png-ec3f0687163cfbacc71c338534d28595.ctex"
+uid="uid://daqdy2fvaha1"
+path="res://.godot/imported/title screen 1.png-7a521ce3d9ba5f29baeabeebb14e79eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/Other Track Layout.png"
-dest_files=["res://.godot/imported/Other Track Layout.png-ec3f0687163cfbacc71c338534d28595.ctex"]
+source_file="res://Resources/Art/title screen 1.png"
+dest_files=["res://.godot/imported/title screen 1.png-7a521ce3d9ba5f29baeabeebb14e79eb.ctex"]
 
 [params]
 
