@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
 [ext_resource type="Script" path="res://UI/LapScreenStartButton.gd" id="1_gltdd"]
-[ext_resource type="Texture2D" path="res://Art/Actual Number of Laps Screen.png" id="1_han30"]
+[ext_resource type="Texture2D" uid="uid://b128uubmud1xq" path="res://Resources/Art/Mod Car Screen-export.png" id="1_han30"]
 [ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="3_k6rq8"]
 
 [node name="Control" type="Control"]

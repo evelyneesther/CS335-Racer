@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcn6a0wo7epv"]
+[gd_scene load_steps=3 format=3 uid="uid://dcn6a0wo7epv"]
 
-[ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="1_jteio"]
-[ext_resource type="Texture2D" path="res://Art/Mod Car Screen.png" id="1_ksbf4"]
-[ext_resource type="FontFile" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_yt062"]
-[ext_resource type="Script" path="res://UI/CarSprite.gd" id="2_tna3j"]
-[ext_resource type="Texture2D" path="res://Art/Red/Red -.png" id="3_1ofi6"]
+[ext_resource type="Texture2D" uid="uid://n8hxuritvdxu" path="res://Resources/Art/Mod Car Screen.png" id="1_7g4tu"]
+[ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Resources/Art/Red/Red -.png" id="3_1ofi6"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -15,9 +12,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(587.5, 325)
-scale = Vector2(1.67286, 1.54762)
-texture = ExtResource("1_ksbf4")
+position = Vector2(577, 323.5)
+scale = Vector2(1.64286, 1.54048)
+texture = ExtResource("1_7g4tu")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -30,7 +27,6 @@ offset_bottom = 160.0
 position = Vector2(232, 207)
 scale = Vector2(1.55729, 1.47313)
 texture = ExtResource("3_1ofi6")
-script = ExtResource("2_tna3j")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -42,7 +38,6 @@ offset_bottom = 64.0
 [node name="Button" type="Button" parent="MarginContainer"]
 layout_mode = 2
 flat = true
-script = ExtResource("1_jteio")
 
 [node name="DorsalWingContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -54,7 +49,6 @@ offset_bottom = 341.0
 [node name="DorsalWingButton" type="OptionButton" parent="DorsalWingContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_yt062")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Dorsals"
@@ -72,7 +66,6 @@ offset_bottom = 200.0
 [node name="ColorButton" type="OptionButton" parent="ColorContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_yt062")
 item_count = 5
 selected = 0
 popup/item_0/text = "Racing Red"
@@ -96,7 +89,6 @@ offset_bottom = 408.0
 [node name="BackWingButton" type="OptionButton" parent="BackWingContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_yt062")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Spoiler"
@@ -114,7 +106,6 @@ offset_bottom = 268.0
 [node name="FrontWingButton" type="OptionButton" parent="FrontWingContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_yt062")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Front Wing"
