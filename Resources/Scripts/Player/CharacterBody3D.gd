@@ -1,17 +1,17 @@
 extends CharacterBody3D
 
 
-const SPEED = 10.0
+const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const ROTATE_SPEED = .02
-
-var mousePosition = Vector2(0, 0)
+const ROTATE_SPEED = 1.2
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+var mousePosition = Vector2(0,0)
+
 func _ready():
-	mousePosition = Vector2(get_window().size.x / 2, get_window().size.x / 2)
+	mousePosition = Vector2(get_window().size.x / 2, get_window().size.y / 2)
 
 func _unhandled_input(event):
 	if event is InputEventKey:
@@ -23,10 +23,18 @@ func _input(event):
 		mousePosition = event.position
 
 func _physics_process(delta):
-	if mousePosition.x > (get_window().size.x + 120) / 2:
-		rotate_y(-ROTATE_SPEED)
-	elif mousePosition.x < (get_window().size.x - 120) / 2:
-		rotate_y(ROTATE_SPEED) 
+	if mousePosition.x < (get_window().size.x - 120) / 2:
+		rotate(Vector3(0,1,0), ROTATE_SPEED * delta)
+	elif mousePosition.x > (get_window().size.x + 120) / 2:
+		rotate(Vector3(0,1,0), -ROTATE_SPEED * delta)
+	
+	if mousePosition.y < (get_window().size.y - 200) / 2:
+		rotate_object_local(Vector3(1,0,0), ROTATE_SPEED * delta)
+	elif mousePosition.y > (get_window().size.y + 200) / 2:
+		rotate_object_local(Vector3(1,0,0), -ROTATE_SPEED * delta)
+	
+	if rotation.z < -0.15:
+		rotation.z = -0.15
 	
 	# Add the gravity.
 	if not is_on_floor():
