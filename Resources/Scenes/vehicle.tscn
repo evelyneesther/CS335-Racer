@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkeqt4sok007o"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Player/Character2D.gd" id="1_soq1q"]
-[ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Resources/Art/Red/Red -.png" id="2_mn15i"]
+[ext_resource type="Texture2D" uid="uid://y2jjgy63e2ik" path="res://Resources/Art/Red/Red -.png" id="2_mn15i"]
 [ext_resource type="Script" path="res://Resources/Scripts/Player/PlayerSprite.gd" id="3_mvxu6"]
 
 [sub_resource type="GDScript" id="GDScript_15smr"]

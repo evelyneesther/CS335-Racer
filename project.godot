@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pastel Racer"
-run/main_scene="res://Resources/Scenes/main_menu.tscn"
+run/main_scene="res://Resources/Scenes/pseudo_3d.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Resources/Art/icon.svg"
 
