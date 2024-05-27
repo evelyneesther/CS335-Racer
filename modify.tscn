@@ -15,8 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(578, 319.875)
-scale = Vector2(1.7, 1.52321)
+position = Vector2(587.5, 325)
+scale = Vector2(1.67286, 1.54762)
 texture = ExtResource("1_ksbf4")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]

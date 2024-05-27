@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
 [ext_resource type="Script" path="res://UI/LapScreenStartButton.gd" id="1_gltdd"]
-[ext_resource type="Texture2D" uid="uid://bpqobo4arc4ob" path="res://Art/Actual Number of Laps Screen.png" id="1_han30"]
+[ext_resource type="Texture2D" uid="uid://b6f2ln48uelvv" path="res://Art/Actual Number of Laps Screen.png" id="1_han30"]
 [ext_resource type="Script" path="res://UI/ModMenuBackButton.gd" id="3_k6rq8"]
 
 [node name="Control" type="Control"]
@@ -56,10 +56,10 @@ value = 1.0
 layout_mode = 2
 anchor_right = 0.228
 anchor_bottom = 0.41
-offset_left = 327.0
-offset_top = 355.0
-offset_right = 736.0
-offset_bottom = 538.0
+offset_left = 334.0
+offset_top = 335.0
+offset_right = 758.0
+offset_bottom = 537.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 20
@@ -84,5 +84,4 @@ theme_override_constants/margin_right = 150
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_gako3")
 theme_override_font_sizes/font_size = 20
-text = "Back"
 script = ExtResource("3_k6rq8")
