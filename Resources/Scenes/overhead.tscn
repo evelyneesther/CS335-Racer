@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=22 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
-[ext_resource type="Texture2D" uid="uid://bojum2yk5ie0q" path="res://Resources/Art/New Updated Track with Stands (USE THIS ONE!!).png" id="3_cbx8u"]
+[ext_resource type="Texture2D" uid="uid://bhum8h5tt1558" path="res://Resources/Art/Track layout option 1.png" id="3_cp05x"]
 [ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_h3lf8"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="5_odxm5"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Speedometer.gd" id="6_cr3gc"]
@@ -14,9 +14,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gsgn"]
 size = Vector2(58519, 6322)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2b0r"]
-size = Vector2(6322, 45875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wod2s"]
 size = Vector2(60313, 8031)
@@ -40,10 +37,10 @@ size = Vector2(5809, 21272)
 size = Vector2(20660, 5264)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
-size = Vector2(6242, 1810)
+size = Vector2(7434, 2296)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabs5"]
-size = Vector2(17360, 14252)
+size = Vector2(14829.5, 7151)
 
 [node name="Overhead" type="Node2D"]
 script = ExtResource("1_r0xw4")
@@ -51,41 +48,38 @@ script = ExtResource("1_r0xw4")
 [node name="UI" parent="." instance=ExtResource("2_ax68v")]
 
 [node name="Map" type="Sprite2D" parent="."]
-position = Vector2(4360, -12888)
-scale = Vector2(24.6909, 24.6909)
-texture = ExtResource("3_cbx8u")
+position = Vector2(8524, -26924)
+scale = Vector2(31.0054, 31.0054)
+texture = ExtResource("3_cp05x")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Map"]
 position = Vector2(-176.583, 521.974)
 scale = Vector2(0.0405007, 0.0405007)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-position = Vector2(-416, -224)
+position = Vector2(9879.46, -223.776)
 scale = Vector2(0.985039, 0.985039)
 build_mode = 1
-polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30187.7, -2292.31, -30024.2, -7974.32, -30297.3, -18354.6, -29765.4, -27022.3, -29151.2, -33898.2, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 33593.6, -11303.1, 23087.4, -11071.7, 33831.2, -10202.7, 34271.8, 8799.66)
+polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30692.4, -1768.05, -37315.1, -6114.22, -37108.1, -22153.6, -36797.7, -28983.3, -31209.8, -32294.7, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 33593.6, -11303.1, 23087.4, -11071.7, 33831.2, -10202.7, 34271.8, 8799.66)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-position = Vector2(-632, 0)
+position = Vector2(9175.49, 181.562)
 build_mode = 1
 polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128, -19400, 29208, -19912, 29176, -24720, 28840, -24984, 22784, -24968, 22280, -24888, 22064, -24544, 22048, -19496)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+position = Vector2(9535.43, -0.0038884)
 build_mode = 1
 polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
 
 [node name="Grass" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Grass"]
-position = Vector2(4492.5, 5597)
+position = Vector2(14528, -4894)
 shape = SubResource("RectangleShape2D_3gsgn")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Grass"]
-position = Vector2(-27244, -13923.5)
-shape = SubResource("RectangleShape2D_s2b0r")
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Grass"]
-position = Vector2(5987.5, -32675.5)
+position = Vector2(30049, -51149)
 shape = SubResource("RectangleShape2D_wod2s")
 
 [node name="Sprite2D_Grass#CollisionShape2D4" type="CollisionShape2D" parent="Grass"]
@@ -93,19 +87,19 @@ position = Vector2(4279, -23235.5)
 shape = SubResource("RectangleShape2D_eutnp")
 
 [node name="Sprite2D_Grass#CollisionShape2D5" type="CollisionShape2D" parent="Grass"]
-position = Vector2(29780, -2860.5)
+position = Vector2(64560, -38326)
 shape = SubResource("RectangleShape2D_8lt25")
 
 [node name="Sprite2D_Grass#CollisionShape2D6" type="CollisionShape2D" parent="Grass"]
-position = Vector2(35077, -12314.5)
+position = Vector2(46252, -17674)
 shape = SubResource("RectangleShape2D_tak4e")
 
 [node name="Sprite2D_Grass#CollisionShape2D7" type="CollisionShape2D" parent="Grass"]
-position = Vector2(-1359.5, -8242.5)
+position = Vector2(-9228, -52374)
 shape = SubResource("RectangleShape2D_qxcyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grass"]
-position = Vector2(-15711.5, -14436)
+position = Vector2(8807, -44312)
 shape = SubResource("RectangleShape2D_ximso")
 
 [node name="Control" type="Control" parent="."]
@@ -115,6 +109,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Vehicle" parent="." instance=ExtResource("4_h3lf8")]
+position = Vector2(16582, -11584)
 collision_layer = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -150,20 +145,20 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(8326, -8369)
+position = Vector2(29865, -26407)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
-position = Vector2(16832, -12648)
+position = Vector2(36697, -27185)
 script = ExtResource("8_1ly6n")
 
 [node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(2408, 1344)
+position = Vector2(3004, 1587)
 shape = SubResource("RectangleShape2D_upce0")
 
 [node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
-position = Vector2(2592, 1320)
-scale = Vector2(32, 32)
+position = Vector2(3282.61, 1472)
+scale = Vector2(38.6087, 38.6087)
 texture = ExtResource("9_pyank")
 
 [node name="NewLapDetector" type="Area2D" parent="."]
@@ -173,6 +168,7 @@ collision_mask = 2
 script = ExtResource("10_iqxyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
+position = Vector2(16728.8, -11532.5)
 shape = SubResource("RectangleShape2D_dabs5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -180,6 +176,7 @@ volume_db = 10.0
 script = ExtResource("11_ea1w1")
 
 [node name="FinishLine" type="Node2D" parent="."]
+position = Vector2(4768, -3264)
 
 [connection signal="area_shape_entered" from="Grass" to="Vehicle" method="_on_grass_area_shape_entered"]
 [connection signal="body_entered" from="Grass" to="Vehicle" method="_on_grass_body_entered"]
