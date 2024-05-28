@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 # TODO: improve polarity system such that changing directions is good
+signal show_pit_stop
 
 var maxSpeed = 3000 # pix/sec
 var accelerationCoifictient = 6000 # pix/sec^2
@@ -17,43 +18,19 @@ var polarity = 0
 
 var brake = 0
 
+var canMove=true
+
 var grassMult=false
+
+var inPitStop=false
+
+var canShowPitStop=true
 
 signal speed_change
 
 func _ready():
 	grassMult=false
-	var carCode=CarArt.carCode
-	match carCode[0]:
-		"R":
-			maxSpeed=3000
-		"O":
-			maxSpeed=2500
-		"B":
-			maxSpeed=1500
-		"G":
-			maxSpeed=2000
-		"P":
-			maxSpeed=5000
-	match carCode[1]:
-		"D":
-			mass=1.2
-			turnSpeed=2.2
-		"W":
-			mass+=.15
-			turnSpeed+=.5
-	match carCode[2]:
-		"D":
-			accelerationCoifictient=6000
-		"W":
-			mass+=.15
-			accelerationCoifictient=10000
-	match carCode[3]:
-		"D":
-			driftModifier=.5
-		"W":
-			mass+=.15
-			driftModifier=.85
+	gen_car()
 	pass
 	
 func _unhandled_input(event):
@@ -84,6 +61,13 @@ func _physics_process(delta):
 	move_and_slide()
 
 func applyAcceleration(move_input):
+	if inPitStop&&speed==0&&canShowPitStop:
+		emit_signal("show_pit_stop")
+		canMove=false
+		canShowPitStop=false
+	if canMove==false:
+		print("reached")
+		return
 	if energy == 0:
 		polarity = move_input
 	
@@ -151,3 +135,51 @@ func _on_grass_body_exited(body):
 		grassMult=false
 	pass # Replace with function body.
 
+func gen_car():
+	var carCode=CarArt.carCode
+	mass=1.2
+	match carCode[0]:
+		"R":
+			maxSpeed=3000
+		"O":
+			maxSpeed=2500
+		"B":
+			maxSpeed=1500
+		"G":
+			maxSpeed=2000
+		"P":
+			maxSpeed=5000
+	match carCode[1]:
+		"D":
+			mass=1.2
+			turnSpeed=2.2
+		"W":
+			mass+=.15
+			turnSpeed+=.5
+	match carCode[2]:
+		"D":
+			accelerationCoifictient=6000
+		"W":
+			mass+=.15
+			accelerationCoifictient=10000
+	match carCode[3]:
+		"D":
+			driftModifier=.5
+		"W":
+			mass+=.15
+			driftModifier=.85
+	$PlayerSprite.reloadTexture()
+
+
+func _on_entered_pit_stop_body_entered(body):
+	if body==self:
+		inPitStop=true
+
+
+func _on_entered_pit_stop_body_exited(body):
+	if body==self:
+		inPitStop=false
+
+
+func _on_loop_detector_player_detected():
+	canShowPitStop=true

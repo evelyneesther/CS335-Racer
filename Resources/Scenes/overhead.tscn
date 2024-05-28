@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=25 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
@@ -6,11 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_h3lf8"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="5_odxm5"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Speedometer.gd" id="6_cr3gc"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopMenu.gd" id="7_5057j"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/LoopDetector.gd" id="7_h1y4w"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopResumeButton.gd" id="7_jcu66"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
 [ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/traffic cones.png" id="9_pyank"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cexyb"]
+size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gsgn"]
 size = Vector2(58519, 6322)
@@ -72,6 +77,12 @@ position = Vector2(9535.43, -0.0038884)
 build_mode = 1
 polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
 
+[node name="EnteredPitStop" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnteredPitStop"]
+position = Vector2(-26301, -32212.5)
+shape = SubResource("RectangleShape2D_cexyb")
+
 [node name="Grass" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Grass"]
@@ -109,12 +120,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Vehicle" parent="." instance=ExtResource("4_h3lf8")]
+unique_name_in_owner = true
 position = Vector2(16582, -11584)
 collision_layer = 3
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UICanvas" type="CanvasLayer" parent="."]
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+[node name="TextEdit" type="TextEdit" parent="UICanvas"]
 layout_direction = 1
 offset_left = 940.0
 offset_top = 549.0
@@ -139,6 +151,109 @@ scroll_fit_content_height = true
 text_direction = 1
 script = ExtResource("6_cr3gc")
 metadata/ignore_rotation = true
+
+[node name="PitStopMenu" type="Control" parent="UICanvas"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_5057j")
+
+[node name="MarginContainer" type="MarginContainer" parent="UICanvas/PitStopMenu"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 62.0
+offset_right = 836.0
+offset_bottom = 550.0
+
+[node name="TextEdit" type="TextEdit" parent="UICanvas/PitStopMenu/MarginContainer"]
+layout_direction = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_odxm5")
+text = "										   Modify Car"
+draw_tabs = true
+
+[node name="BackWingButton" type="OptionButton" parent="UICanvas/PitStopMenu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 488.0
+offset_top = 306.0
+offset_right = 709.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_odxm5")
+item_count = 2
+selected = 0
+popup/item_0/text = "Default Spoiler"
+popup/item_0/id = 0
+popup/item_1/text = "Aero Spoiler"
+popup/item_1/id = 1
+
+[node name="ColorButton" type="OptionButton" parent="UICanvas/PitStopMenu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 484.0
+offset_top = 144.0
+offset_right = 731.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_odxm5")
+item_count = 5
+selected = 0
+popup/item_0/text = "Racing Red"
+popup/item_0/id = 0
+popup/item_1/text = "Boosted Blue"
+popup/item_1/id = 1
+popup/item_2/text = "Performance Pink"
+popup/item_2/id = 2
+popup/item_3/text = "Gearshift Green"
+popup/item_3/id = 3
+popup/item_4/text = "Okay Orange"
+popup/item_4/id = 4
+
+[node name="FrontWingButton" type="OptionButton" parent="UICanvas/PitStopMenu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 485.0
+offset_top = 198.0
+offset_right = 748.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_odxm5")
+item_count = 2
+selected = 0
+popup/item_0/text = "Default Front Wing"
+popup/item_0/id = 0
+popup/item_1/text = "Boosted Front Wing"
+popup/item_1/id = 1
+
+[node name="DorsalWingButton" type="OptionButton" parent="UICanvas/PitStopMenu"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 487.0
+offset_top = 252.0
+offset_right = 716.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_odxm5")
+item_count = 2
+selected = 0
+popup/item_0/text = "Default Dorsals"
+popup/item_0/id = 0
+popup/item_1/text = "Aero Dorsals"
+popup/item_1/id = 1
+
+[node name="Button" type="Button" parent="UICanvas/PitStopMenu"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 457.0
+offset_right = 671.0
+offset_bottom = 499.0
+theme_override_fonts/font = ExtResource("5_odxm5")
+text = "Resume"
+script = ExtResource("7_jcu66")
 
 [node name="Loop Detector" type="Area2D" parent="."]
 position = Vector2(17128, -17928)
@@ -178,13 +293,21 @@ script = ExtResource("11_ea1w1")
 [node name="FinishLine" type="Node2D" parent="."]
 position = Vector2(4768, -3264)
 
+[connection signal="body_entered" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_entered"]
+[connection signal="body_exited" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_exited"]
 [connection signal="area_shape_entered" from="Grass" to="Vehicle" method="_on_grass_area_shape_entered"]
 [connection signal="body_entered" from="Grass" to="Vehicle" method="_on_grass_body_entered"]
 [connection signal="body_exited" from="Grass" to="Vehicle" method="_on_grass_body_exited"]
 [connection signal="body_shape_entered" from="Grass" to="Vehicle" method="_on_grass_body_shape_entered"]
-[connection signal="speed_change" from="Vehicle" to="CanvasLayer/TextEdit" method="_on_vehicle_speed_change"]
+[connection signal="show_pit_stop" from="Vehicle" to="." method="_on_vehicle_show_pit_stop"]
+[connection signal="speed_change" from="Vehicle" to="UICanvas/TextEdit" method="_on_vehicle_speed_change"]
+[connection signal="item_selected" from="UICanvas/PitStopMenu/BackWingButton" to="UICanvas/PitStopMenu" method="_on_back_wing_button_item_selected"]
+[connection signal="item_selected" from="UICanvas/PitStopMenu/ColorButton" to="UICanvas/PitStopMenu" method="_on_color_button_item_selected"]
+[connection signal="item_selected" from="UICanvas/PitStopMenu/FrontWingButton" to="UICanvas/PitStopMenu" method="_on_front_wing_button_item_selected"]
+[connection signal="item_selected" from="UICanvas/PitStopMenu/DorsalWingButton" to="UICanvas/PitStopMenu" method="_on_dorsal_wing_button_item_selected"]
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
 [connection signal="player_detected" from="Loop Detector" to="." method="_on_loop_detector_player_detected"]
+[connection signal="player_detected" from="Loop Detector" to="Vehicle" method="_on_loop_detector_player_detected"]
 [connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
