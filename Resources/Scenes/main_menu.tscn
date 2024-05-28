@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc2l438g4exkk"]
+[gd_scene load_steps=7 format=3 uid="uid://c885xr3rhi2oj"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/UI/MainMenu.gd" id="1_sv5fb"]
-[ext_resource type="Texture2D" uid="uid://do08xktmnv1q2" path="res://Resources/Art/Title Screen.png" id="2_g6c6x"]
+[ext_resource type="Texture2D" uid="uid://daqdy2fvaha1" path="res://Resources/Art/title screen 1.png" id="2_0coku"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="3_xdjof"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/QuitButton.gd" id="4_h1dsr"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/StartButton.gd" id="5_7j0gv"]
@@ -17,16 +17,19 @@ grow_vertical = 2
 script = ExtResource("1_sv5fb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(580, 340)
-scale = Vector2(1.66, 1.6)
-texture = ExtResource("2_g6c6x")
+position = Vector2(575.5, 324.5)
+scale = Vector2(1.64714, 1.54524)
+texture = ExtResource("2_0coku")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
-offset_left = 345.0
-offset_top = 457.0
-offset_right = 685.0
-offset_bottom = 618.0
+offset_left = 264.0
+offset_top = 508.0
+offset_right = 604.0
+offset_bottom = 698.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.596771, 0.728931)
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 20
@@ -43,10 +46,11 @@ script = ExtResource("4_h1dsr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 440.0
-offset_top = 338.0
-offset_right = 687.0
-offset_bottom = 426.0
+offset_left = 206.0
+offset_top = 426.0
+offset_right = 453.0
+offset_bottom = 586.0
+scale = Vector2(1.2, 1.2)
 theme_override_constants/margin_bottom = 80
 
 [node name="Start Button" type="Button" parent="MarginContainer"]
@@ -63,10 +67,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.228
 anchor_bottom = 0.41
-offset_left = 417.0
-offset_top = 441.0
-offset_right = 458.344
-offset_bottom = 254.32
+offset_left = 693.0
+offset_top = 496.0
+offset_right = 734.344
+offset_bottom = 309.32
+scale = Vector2(1.14284, 1)
 
 [node name="Button" type="Button" parent="MarginContainer3"]
 layout_mode = 2

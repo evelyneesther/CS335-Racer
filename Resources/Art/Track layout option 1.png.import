@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc460bkmlrmwi"
-path="res://.godot/imported/Other Track Layout.png-ec3f0687163cfbacc71c338534d28595.ctex"
+uid="uid://bhum8h5tt1558"
+path="res://.godot/imported/Track layout option 1.png-953cc9618598412743088a98c61e1227.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/Other Track Layout.png"
-dest_files=["res://.godot/imported/Other Track Layout.png-ec3f0687163cfbacc71c338534d28595.ctex"]
+source_file="res://Resources/Art/Track layout option 1.png"
+dest_files=["res://.godot/imported/Track layout option 1.png-953cc9618598412743088a98c61e1227.ctex"]
 
 [params]
 
