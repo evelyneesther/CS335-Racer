@@ -17,17 +17,19 @@ grow_vertical = 2
 script = ExtResource("1_sv5fb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(575.5, 326.5)
-scale = Vector2(1.64714, 1.53571)
+position = Vector2(575.5, 324.5)
+scale = Vector2(1.64714, 1.54524)
 texture = ExtResource("2_0coku")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
-offset_left = 160.0
-offset_top = 493.0
-offset_right = 500.0
-offset_bottom = 683.0
-scale = Vector2(0.967896, 0.839678)
+offset_left = 264.0
+offset_top = 508.0
+offset_right = 604.0
+offset_bottom = 698.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.596771, 0.728931)
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 20
