@@ -1,17 +1,52 @@
 extends Sprite2D
 
-var front
-var color
-var back
-var sides
-var direction
+var front=""
+var color="Red"
+var back=""
+var sides=""
+var direction=""
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	color="Red"
-	front=""
-	back=""
-	sides=""
-	direction=""
+	var code=CarArt.carCode
+	self.texture=load(code)
+	match code[0]:
+		"R":
+			color="Red"
+			%ColorButton.select(0)
+		"B":
+			color="Blue"
+			%ColorButton.select(1)
+		"P":
+			color="Pink"
+			%ColorButton.select(2)
+		"G":
+			color="Green"
+			%ColorButton.select(3)
+		"O":
+			color="Orange"
+			%ColorButton.select(4)
+	match code[1]:
+		"D":
+			front=""
+			%FrontWingButton.select(0)
+		"W":
+			front="FrontWing "
+			%FrontWingButton.select(1)
+	match code[2]:
+		"D":
+			back=""
+			%BackWingButton.select(0)
+		"W":
+			back="BackWing "
+			%BackWingButton.select(1)
+	match code[3]:
+		"D":
+			sides=""
+			%DorsalWingButton.select(0)
+		"W":
+			sides="SideWing"
+			%DorsalWingButton.select(1)
+	self.texture=load(selected_car())
 	pass # Replace with function body.
 
 
@@ -57,7 +92,6 @@ func selected_car():
 	carstr=carstr.strip_edges()
 	
 	CarArt.carPath=carstr+".png"
-	print(CarArt.selected_car())
 	return(carstr+".png")
 
 func _on_front_wing_button_item_selected(index):
