@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckykaigc2locu"]
+[gd_scene load_steps=5 format=3 uid="uid://bfuuuxw17y2as"]
 
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/LapScreenStartButton.gd" id="1_gltdd"]
-[ext_resource type="Texture2D" uid="uid://ccpe4ia5emiu3" path="res://Resources/Art/Actual Number of Laps Screen.png" id="1_wu0in"]
+[ext_resource type="Texture2D" path="res://Resources/Art/Actual Number of Laps Screen.png" id="1_wu0in"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="3_k6rq8"]
 
 [node name="Control" type="Control"]
