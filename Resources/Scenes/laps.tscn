@@ -1,32 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfuuuxw17y2as"]
+[gd_scene load_steps=5 format=3 uid="uid://jyb757kdhft2"]
 
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
-[ext_resource type="Script" path="res://Resources/Scripts/UI/LapScreenStartButton.gd" id="1_gltdd"]
-[ext_resource type="Texture2D" uid="uid://ccpe4ia5emiu3" path="res://Resources/Art/Actual Number of Laps Screen.png" id="1_wu0in"]
-[ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="3_k6rq8"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/laps.gd" id="1_g4xaf"]
+[ext_resource type="Texture2D" uid="uid://ucvq0e8ogpoq" path="res://Resources/Art/Actual Number of Laps Screen.png" id="2_cc7ce"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="3_abnq6"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="4_ocnj4"]
 
-[node name="Control" type="Control"]
+[node name="laps" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g4xaf")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
-position = Vector2(576.5, 323.5)
-scale = Vector2(1.65286, 1.55476)
-texture = ExtResource("1_wu0in")
+position = Vector2(580.5, 323)
+scale = Vector2(1.64714, 1.53333)
+texture = ExtResource("2_cc7ce")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 257.0
-offset_top = 150.0
-offset_right = 958.0
-offset_bottom = 360.0
+offset_left = 220.0
+offset_top = 298.0
+offset_right = 921.0
+offset_bottom = 508.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
@@ -34,7 +35,7 @@ theme_override_constants/margin_bottom = 80
 
 [node name="no of laps" type="Label" parent="Panel/MarginContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_gako3")
+theme_override_fonts/font = ExtResource("3_abnq6")
 theme_override_font_sizes/font_size = 40
 
 [node name="MarginContainer2" type="MarginContainer" parent="Panel"]
@@ -47,9 +48,10 @@ offset_top = 223.0
 offset_right = 664.88
 offset_bottom = 249.6
 
-[node name="SpinBox" type="SpinBox" parent="Panel/MarginContainer2"]
+[node name="LapsAmount" type="SpinBox" parent="Panel/MarginContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
-max_value = 4.0
+min_value = 1.0
 value = 1.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="Panel"]
@@ -65,25 +67,27 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Button" type="Button" parent="Panel/MarginContainer3"]
+[node name="Start" type="Button" parent="Panel/MarginContainer3"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_gako3")
+theme_override_fonts/font = ExtResource("3_abnq6")
 theme_override_font_sizes/font_size = 40
 flat = true
-script = ExtResource("1_gltdd")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 38.0
+offset_left = 48.0
 offset_top = 23.0
-offset_right = 261.0
+offset_right = 271.0
 offset_bottom = 63.0
+scale = Vector2(1.4, 1)
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_right = 150
 
 [node name="Button" type="Button" parent="MarginContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_gako3")
+theme_override_fonts/font = ExtResource("3_abnq6")
 theme_override_font_sizes/font_size = 20
 flat = true
-script = ExtResource("3_k6rq8")
+script = ExtResource("4_ocnj4")
+
+[connection signal="pressed" from="Panel/MarginContainer3/Start" to="." method="_on_start_pressed"]
