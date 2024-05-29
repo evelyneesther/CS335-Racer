@@ -4,6 +4,7 @@ extends Node
 signal pop_to_ui(instance)
 signal race_finished
 
+var currMap=""
 
 var laps_max = 1
 
