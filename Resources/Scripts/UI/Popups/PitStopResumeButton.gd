@@ -7,4 +7,5 @@ func _physics_process(delta: float) -> void:
 		%Vehicle.canMove=true
 		%PitStopMenu.visible=false
 		%Vehicle.gen_car()
+		%Music.setPlaying()
 		#%PlayerSprite.reloadTexture()

@@ -77,6 +77,9 @@ position = Vector2(9535.43, -0.0038884)
 build_mode = 1
 polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
 
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(-20914.3, -8199.16, -21064, -25103.9, -18949, -25115.9, -19035, -8101.21)
+
 [node name="EnteredPitStop" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnteredPitStop"]
@@ -286,7 +289,8 @@ script = ExtResource("10_iqxyv")
 position = Vector2(16728.8, -11532.5)
 shape = SubResource("RectangleShape2D_dabs5")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 volume_db = 10.0
 script = ExtResource("11_ea1w1")
 

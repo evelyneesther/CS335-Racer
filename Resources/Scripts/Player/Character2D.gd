@@ -50,6 +50,10 @@ func _physics_process(delta):
 		brake = 0
 	
 	move_input=hitWall(move_input)
+	
+	if canMove==false:
+		return
+		
 	applyAcceleration(move_input)
 
 	velocity = transform.x * polarity * speed
@@ -65,9 +69,6 @@ func applyAcceleration(move_input):
 		emit_signal("show_pit_stop")
 		canMove=false
 		canShowPitStop=false
-	if canMove==false:
-		print("reached")
-		return
 	if energy == 0:
 		polarity = move_input
 	

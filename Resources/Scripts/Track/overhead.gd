@@ -40,4 +40,3 @@ func _on_loop_detector_player_detected():
 
 func _on_vehicle_show_pit_stop():
 	%PitStopMenu.visible=true
-	pass # Replace with function body.
