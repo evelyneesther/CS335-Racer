@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://mj5o734np0d"]
+[gd_scene load_steps=8 format=3 uid="uid://drfw27w2aad1d"]
 
-[ext_resource type="Texture2D" uid="uid://ccpe4ia5emiu3" path="res://Resources/Art/Actual Number of Laps Screen.png" id="1_vmcdj"]
+[ext_resource type="Texture2D" uid="uid://ucvq0e8ogpoq" path="res://Resources/Art/Actual Number of Laps Screen.png" id="1_vmcdj"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="2_cd8k8"]
-[ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="3_y0rva"]
-[ext_resource type="Texture2D" uid="uid://cc460bkmlrmwi" path="res://Resources/Art/Other Track Layout.png" id="4_wyvmm"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/LevelSelectBackButton.gd" id="3_eiodi"]
+[ext_resource type="Texture2D" uid="uid://dng1gunjdsews" path="res://Resources/Art/Other Track Layout.png" id="4_wyvmm"]
 [ext_resource type="Texture2D" uid="uid://bhum8h5tt1558" path="res://Resources/Art/Track layout option 1.png" id="5_36hp1"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/MinnowMeadowButton.gd" id="6_vy2b2"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/PolarParkwayButton.gd" id="7_5es7g"]
@@ -57,14 +57,9 @@ theme_override_constants/margin_right = 150
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_cd8k8")
 theme_override_font_sizes/font_size = 20
-flat = true
-script = ExtResource("3_y0rva")
-
-[node name="TextEdit" type="TextEdit" parent="MarginContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_cd8k8")
-theme_override_font_sizes/font_size = 19
 text = "Back"
+flat = true
+script = ExtResource("3_eiodi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(736.938, 321.625)
