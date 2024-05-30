@@ -1,7 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c885xr3rhi2oj"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/UI/MainMenu.gd" id="1_sv5fb"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://do08xktmnv1q2" path="res://Resources/Art/Title Screen.png" id="2_lkj11"]
+=======
+[ext_resource type="Texture2D" uid="uid://b54s5vxa4oxmj" path="res://Resources/Art/title screen.png" id="2_6r8ru"]
+>>>>>>> Stashed changes
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="3_xdjof"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/QuitButton.gd" id="4_h1dsr"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/StartButton.gd" id="5_7j0gv"]
@@ -17,6 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_sv5fb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< Updated upstream
 position = Vector2(576, 323)
 scale = Vector2(1.4425, 1.25385)
 texture = ExtResource("2_lkj11")
@@ -27,6 +32,18 @@ offset_left = 342.0
 offset_top = 495.0
 offset_right = 682.0
 offset_bottom = 685.0
+=======
+position = Vector2(575.5, 324)
+scale = Vector2(1.43875, 1.24231)
+texture = ExtResource("2_6r8ru")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 388.0
+offset_top = 491.0
+offset_right = 728.0
+offset_bottom = 681.0
+>>>>>>> Stashed changes
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.596771, 0.728931)
@@ -46,10 +63,17 @@ script = ExtResource("4_h1dsr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
+<<<<<<< Updated upstream
 offset_left = 249.0
 offset_top = 412.0
 offset_right = 496.0
 offset_bottom = 572.0
+=======
+offset_left = 243.0
+offset_top = 409.0
+offset_right = 490.0
+offset_bottom = 489.0
+>>>>>>> Stashed changes
 scale = Vector2(1.2, 1.2)
 theme_override_constants/margin_bottom = 80
 

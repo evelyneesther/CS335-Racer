@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://d38htn2s0s8jx"]
+
+[ext_resource type="Texture2D" uid="uid://ccxckg2jqigrw" path="res://Resources/Art/Map Selection Screen.png" id="1_eeb2q"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="2_cd8k8"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/LevelSelectBackButton.gd" id="3_eiodi"]
+[ext_resource type="Texture2D" uid="uid://cc460bkmlrmwi" path="res://Resources/Art/Other Track Layout.png" id="4_wyvmm"]
+[ext_resource type="Texture2D" uid="uid://bhum8h5tt1558" path="res://Resources/Art/Track layout option 1.png" id="5_36hp1"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/MinnowMeadowButton.gd" id="6_vy2b2"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/PolarParkwayButton.gd" id="7_5es7g"]
+
+[node name="LevelSelect" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(580.5, 323)
+scale = Vector2(1.64714, 1.53333)
+texture = ExtResource("1_eeb2q")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 298.0
+offset_right = 921.0
+offset_bottom = 508.0
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="no of laps" type="Label" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cd8k8")
+theme_override_font_sizes/font_size = 40
+
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 1264.0
+offset_top = 106.0
+offset_right = 1795.0
+offset_bottom = 200.0
+theme_override_fonts/font = ExtResource("2_cd8k8")
+theme_override_font_sizes/font_size = 56
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 30.0
+offset_top = 17.0
+offset_right = 253.0
+offset_bottom = 57.0
+scale = Vector2(1.4, 1)
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 150
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cd8k8")
+theme_override_font_sizes/font_size = 20
+flat = true
+script = ExtResource("3_eiodi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(857, 364)
+scale = Vector2(0.113641, 0.113641)
+texture = ExtResource("4_wyvmm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(329, 366)
+scale = Vector2(0.102249, 0.124767)
+texture = ExtResource("5_36hp1")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 83.0
+offset_top = 532.0
+offset_right = 377.0
+offset_bottom = 601.0
+scale = Vector2(1.58951, 1.16482)
+theme_override_fonts/font = ExtResource("2_cd8k8")
+theme_override_font_sizes/font_size = 23
+flat = true
+script = ExtResource("6_vy2b2")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 615.0
+offset_top = 539.0
+offset_right = 861.0
+offset_bottom = 597.0
+scale = Vector2(2.04, 1)
+theme_override_fonts/font = ExtResource("2_cd8k8")
+theme_override_font_sizes/font_size = 22
+flat = true
+script = ExtResource("7_5es7g")

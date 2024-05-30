@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream
-uid="uid://do08xktmnv1q2"
-=======
-uid="uid://b54s5vxa4oxmj"
->>>>>>> Stashed changes
-path="res://.godot/imported/title screen.png-206b5d3243518265b09851b8fd03eb3b.ctex"
+uid="uid://ccxckg2jqigrw"
+path="res://.godot/imported/Map Selection Screen.png-d70c741b2322de87af1fcac47a3f9916.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/title screen.png"
-dest_files=["res://.godot/imported/title screen.png-206b5d3243518265b09851b8fd03eb3b.ctex"]
+source_file="res://Resources/Art/Map Selection Screen.png"
+dest_files=["res://.godot/imported/Map Selection Screen.png-d70c741b2322de87af1fcac47a3f9916.ctex"]
 
 [params]
 
