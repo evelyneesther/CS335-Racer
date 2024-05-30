@@ -33,8 +33,8 @@ func _physics_process(delta):
 	elif mousePosition.y > (get_window().size.y + 200) / 2:
 		rotate_object_local(Vector3(1,0,0), -ROTATE_SPEED * delta)
 	
-	if rotation.z < -0.15:
-		rotation.z = -0.15
+	if rotation.x > 0.5:
+		rotation.x = 0.5
 	
 	# Add the gravity.
 	if not is_on_floor():

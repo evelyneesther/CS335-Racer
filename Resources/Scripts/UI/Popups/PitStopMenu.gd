@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Control
 
 var front=""
 var color="Red"
@@ -8,7 +8,6 @@ var direction=""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var code=CarArt.carCode
-	self.texture=load(code)
 	match code[0]:
 		"R":
 			color="Red"
@@ -46,13 +45,7 @@ func _ready():
 		"W":
 			sides="SideWing"
 			%DorsalWingButton.select(1)
-	self.texture=load(selected_car())
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 func selected_car():
 	var carCode=""
 	match color:
@@ -99,7 +92,7 @@ func _on_front_wing_button_item_selected(index):
 		front=""
 	elif index==1:
 		front="FrontWing "
-	self.texture=load(selected_car())
+	selected_car()
 
 
 func _on_dorsal_wing_button_item_selected(index):
@@ -107,9 +100,7 @@ func _on_dorsal_wing_button_item_selected(index):
 		sides=""
 	elif index==1:
 		sides="SideWing"
-	self.texture=load(selected_car())
-	
-	pass # Replace with function body.
+	selected_car()
 
 
 func _on_back_wing_button_item_selected(index):
@@ -117,8 +108,7 @@ func _on_back_wing_button_item_selected(index):
 		back=""
 	elif index==1:
 		back="BackWing "
-	self.texture=load(selected_car())
-	pass # Replace with function body.
+	selected_car()
 
 
 func _on_color_button_item_selected(index):
@@ -132,5 +122,4 @@ func _on_color_button_item_selected(index):
 		color="Green"
 	elif index==4:
 		color="Orange"
-	self.texture=load(selected_car())
-	pass # Replace with function body.
+	selected_car()

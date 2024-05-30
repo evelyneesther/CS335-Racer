@@ -18,3 +18,6 @@ func _input(event):
 		rotate(turn * PI / 4)
 	if event.is_action_released("brake"):
 		rotation = PI / 2
+
+func reloadTexture():
+	self.texture=load(CarArt.selected_car())
