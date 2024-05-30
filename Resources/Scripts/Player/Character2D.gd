@@ -38,7 +38,7 @@ func _unhandled_input(event):
 		if event.pressed and event.keycode == KEY_ESCAPE:
 			get_tree().change_scene_to_file("res://Resources/Scenes/main_menu.tscn")
 		elif event.is_action_pressed("reset"):
-			get_tree().change_scene_to_file("res://Resources/Scenes/overhead.tscn")
+			get_tree().change_scene_to_file(ManagerGame.currMap)
 
 func _physics_process(delta):	
 	var move_input = Input.get_axis("back", "forward")

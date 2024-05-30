@@ -64,6 +64,7 @@ position = Vector2(13164.5, -56723.8)
 shape = SubResource("RectangleShape2D_d10jw")
 
 [node name="Grass" type="Area2D" parent="."]
+visible = false
 position = Vector2(-28672, -3584)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass"]
@@ -275,6 +276,7 @@ position = Vector2(4768, -3264)
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
 [connection signal="input_event" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_input_event"]
 [connection signal="player_detected" from="Loop Detector" to="." method="_on_loop_detector_player_detected"]
+[connection signal="player_detected" from="Loop Detector" to="Vehicle" method="_on_loop_detector_player_detected"]
 [connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
