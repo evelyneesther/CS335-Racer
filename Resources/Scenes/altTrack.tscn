@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bvjhmqcc2ttk1"]
+[gd_scene load_steps=20 format=3 uid="uid://bvjhmqcc2ttk1"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_yqg7v"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_6vaaa"]
@@ -27,7 +27,10 @@ size = Vector2(7924, 3327)
 size = Vector2(4224, 27244)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pbf5"]
-size = Vector2(30689.8, 5504.5)
+size = Vector2(30689.8, 5266.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4h0c"]
+size = Vector2(14464, 7808)
 
 [node name="AltTrack" type="Node2D"]
 script = ExtResource("1_yqg7v")
@@ -254,8 +257,12 @@ collision_mask = 2
 script = ExtResource("12_ss556")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
-position = Vector2(36229, -47609)
+position = Vector2(36229, -47489.9)
 shape = SubResource("RectangleShape2D_6pbf5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NewLapDetector"]
+position = Vector2(40327, -53726)
+shape = SubResource("RectangleShape2D_p4h0c")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
