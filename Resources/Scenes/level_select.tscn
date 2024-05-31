@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="2_cd8k8"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/LevelSelectBackButton.gd" id="3_eiodi"]
 [ext_resource type="Texture2D" uid="uid://cc460bkmlrmwi" path="res://Resources/Art/Other Track Layout.png" id="4_wyvmm"]
-[ext_resource type="Texture2D" uid="uid://bhum8h5tt1558" path="res://Resources/Art/Track layout option 1.png" id="5_36hp1"]
+[ext_resource type="Texture2D" uid="uid://cj7w7hiek6cgc" path="res://Resources/Art/minnow meadow.png" id="5_2rii4"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/MinnowMeadowButton.gd" id="6_vy2b2"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/PolarParkwayButton.gd" id="7_5es7g"]
 
@@ -66,9 +66,9 @@ scale = Vector2(0.10606, 0.111798)
 texture = ExtResource("4_wyvmm")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(324, 370)
-scale = Vector2(0.0957727, 0.126463)
-texture = ExtResource("5_36hp1")
+position = Vector2(313, 374)
+scale = Vector2(0.106158, 0.112352)
+texture = ExtResource("5_2rii4")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 85.0
