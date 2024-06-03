@@ -1,7 +1,5 @@
 extends AudioStreamPlayer
 
-var car
-var musicPath
 var music
 
 var currTime=0
@@ -12,10 +10,7 @@ func _process(delta):
 		setPlaying()
 
 func setPlaying():
-	car = String(CarArt.carCode)
-	
-	musicPath = String("res://Resources/Music/" + car + ".mp3")
-	music = load(musicPath)
+	music = load("res://Resources/Music/Fall.mp3")
 	stop()
 	stream = music
-	play(currTime)
+	play(0)
