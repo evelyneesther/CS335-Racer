@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmld0e0x80ny4"]
+
+[ext_resource type="Texture2D" uid="uid://cpno0rjx1xfrx" path="res://Resources/Art/UI/How to Play.png" id="1_y32c6"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/HowToContinueButton.gd" id="2_55w0m"]
+
+[node name="HowToPlay" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(593, 324)
+scale = Vector2(1.24808, 1.24808)
+texture = ExtResource("1_y32c6")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 856.0
+offset_top = 586.0
+offset_right = 1079.0
+offset_bottom = 630.0
+script = ExtResource("2_55w0m")

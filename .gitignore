@@ -16,7 +16,9 @@ data_*/
 mono_crash.*.json
 
 # Music raws
-Music/raws/*
+Resources/Music/raws/*
+*.xrns
 
 #Music Backups
 Resources/Music/Interactive_Racer_Backups/*
+Resources/Music/Fall_WIP_Backups/*
