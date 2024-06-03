@@ -184,3 +184,8 @@ func _on_entered_pit_stop_body_exited(body):
 
 func _on_loop_detector_player_detected():
 	canShowPitStop=true
+
+
+func _on_hell_portal_body_entered(body):
+	if body==self:
+		get_tree().change_scene_to_file("res://Resources/Scenes/pseudo_3d.tscn")

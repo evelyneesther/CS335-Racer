@@ -272,6 +272,11 @@ script = ExtResource("13_5ikn2")
 [node name="FinishLine" type="Node2D" parent="."]
 position = Vector2(4768, -3264)
 
+[node name="Hell Portal" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hell Portal"]
+polygon = PackedVector2Array(-25431, -51347, -25299, -51467, -25353, -51718, -25532, -51724, -25628, -51508)
+
 [connection signal="body_entered" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_entered"]
 [connection signal="body_exited" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_exited"]
 [connection signal="show_pit_stop" from="Vehicle" to="." method="_on_vehicle_show_pit_stop"]
@@ -288,3 +293,5 @@ position = Vector2(4768, -3264)
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
 [connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
+[connection signal="body_entered" from="Hell Portal" to="Vehicle" method="_on_hell_portal_body_entered"]
+[connection signal="input_event" from="Hell Portal" to="." method="_on_hell_portal_input_event"]

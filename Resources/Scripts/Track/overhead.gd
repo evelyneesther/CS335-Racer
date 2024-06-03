@@ -50,3 +50,8 @@ func _on_loop_detector_player_detected():
 
 func _on_vehicle_show_pit_stop():
 	%PitStopMenu.visible=true
+
+
+func _on_hell_portal_input_event(viewport, event, shape_idx):
+	get_tree().change_scene_to_file("res://Resources/Scenes/pseudo_3d.tscn")
+	pass # Replace with function body.
