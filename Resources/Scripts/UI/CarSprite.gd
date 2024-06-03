@@ -8,7 +8,7 @@ var direction=""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var code=CarArt.carCode
-	self.texture=load(code)
+	self.texture=load(CarArt.carPath)
 	match code[0]:
 		"R":
 			color="Red"
@@ -49,10 +49,6 @@ func _ready():
 	self.texture=load(selected_car())
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 func selected_car():
 	var carCode=""
 	match color:

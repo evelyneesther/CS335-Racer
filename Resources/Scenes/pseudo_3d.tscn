@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qcmlawrdaiwl" path="res://Resources/Art/Maps/wall3.png" id="6_l46xg"]
 [ext_resource type="Texture2D" uid="uid://dj50e3fr7rrsh" path="res://Resources/Art/Maps/wall4.png" id="7_ys1q5"]
 [ext_resource type="Texture2D" uid="uid://bb0s7dfkwhgud" path="res://Resources/Art/Maps/top.png" id="8_rocvw"]
-[ext_resource type="AudioStream" uid="uid://dhwdcgfogqn03" path="res://Resources/Music/Transition.mp3" id="11_adb6y"]
+[ext_resource type="AudioStream" uid="uid://biqqx575po484" path="res://Resources/Music/Transition.mp3" id="11_adb6y"]
 [ext_resource type="Script" path="res://Resources/Scenes/AudioStreamPlayer_alt.gd" id="11_p23a1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0te1w"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cic7ihym18ik3"]
+[gd_scene load_steps=21 format=3 uid="uid://bvjhmqcc2ttk1"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_yqg7v"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_6vaaa"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_c6n2v"]
 [ext_resource type="FontFile" uid="uid://cmn6qps3tdvq7" path="res://Resources/Art/Fonts/vermin_vibes_1989.ttf" id="5_3y4ch"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Speedometer.gd" id="6_6ary1"]
-[ext_resource type="Theme" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="7_ab7gt"]
+[ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="7_ab7gt"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopMenu.gd" id="7_wy7nj"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopResumeButton.gd" id="8_ftqhy"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/LoopDetector.gd" id="9_h8khn"]
