@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7w7hiek6cgc"
-path="res://.godot/imported/minnow meadow.png-49ee6739529804bdc5e0080d62380d57.ctex"
+uid="uid://bhum8h5tt1558"
+path="res://.godot/imported/Track layout option 1.png-63b7024a800b0b2fe931884af9b6d296.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/minnow meadow.png"
-dest_files=["res://.godot/imported/minnow meadow.png-49ee6739529804bdc5e0080d62380d57.ctex"]
+source_file="res://Resources/Art/Maps/Track layout option 1.png"
+dest_files=["res://.godot/imported/Track layout option 1.png-63b7024a800b0b2fe931884af9b6d296.ctex"]
 
 [params]
 

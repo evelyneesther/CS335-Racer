@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b128uubmud1xq"
-path="res://.godot/imported/Mod Car Screen-export.png-cbeab079b51bba0288a136e40080567a.ctex"
+uid="uid://cj7w7hiek6cgc"
+path="res://.godot/imported/minnow meadow.png-754f80541b0d6c67605c30e7a903954b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/Mod Car Screen-export.png"
-dest_files=["res://.godot/imported/Mod Car Screen-export.png-cbeab079b51bba0288a136e40080567a.ctex"]
+source_file="res://Resources/Art/Maps/minnow meadow.png"
+dest_files=["res://.godot/imported/minnow meadow.png-754f80541b0d6c67605c30e7a903954b.ctex"]
 
 [params]
 

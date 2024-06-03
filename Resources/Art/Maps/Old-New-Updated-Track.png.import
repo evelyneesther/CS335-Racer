@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhum8h5tt1558"
-path="res://.godot/imported/Track layout option 1.png-953cc9618598412743088a98c61e1227.ctex"
+uid="uid://du4hcxewpv33"
+path="res://.godot/imported/Old-New-Updated-Track.png-743d037644b6adb9d15d4f0a05bf1b82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/Track layout option 1.png"
-dest_files=["res://.godot/imported/Track layout option 1.png-953cc9618598412743088a98c61e1227.ctex"]
+source_file="res://Resources/Art/Maps/Old-New-Updated-Track.png"
+dest_files=["res://.godot/imported/Old-New-Updated-Track.png-743d037644b6adb9d15d4f0a05bf1b82.ctex"]
 
 [params]
 

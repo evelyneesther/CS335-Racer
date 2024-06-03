@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qcmlawrdaiwl"
-path.s3tc="res://.godot/imported/wall3.png-e1d47672e8bb22c39230c9004fdbcee0.s3tc.ctex"
+path.s3tc="res://.godot/imported/wall3.png-9c09bb3e9209897253e79375184bd539.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Resources/Art/wall3.png"
-dest_files=["res://.godot/imported/wall3.png-e1d47672e8bb22c39230c9004fdbcee0.s3tc.ctex"]
+source_file="res://Resources/Art/Maps/wall3.png"
+dest_files=["res://.godot/imported/wall3.png-9c09bb3e9209897253e79375184bd539.s3tc.ctex"]
 
 [params]
 

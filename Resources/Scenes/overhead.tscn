@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
-[ext_resource type="Texture2D" uid="uid://cj7w7hiek6cgc" path="res://Resources/Art/minnow meadow.png" id="3_58hka"]
+[ext_resource type="Texture2D" uid="uid://cj7w7hiek6cgc" path="res://Resources/Art/Maps/minnow meadow.png" id="3_58hka"]
 [ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_h3lf8"]
 [ext_resource type="FontFile" uid="uid://cmn6qps3tdvq7" path="res://Resources/Art/Fonts/vermin_vibes_1989.ttf" id="5_us1g8"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Speedometer.gd" id="6_cr3gc"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
 [ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="8_6540g"]
 [ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="9_n72q7"]
-[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/traffic cones.png" id="9_pyank"]
+[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/Maps/traffic cones.png" id="9_pyank"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
 

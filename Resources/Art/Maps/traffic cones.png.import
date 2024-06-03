@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da6758e7e3t6w"
-path="res://.godot/imported/Map-Layout-Sheet.png-52ae5caf52d22f199aef170b800e8a8f.ctex"
+uid="uid://d0xhxjbwjahab"
+path="res://.godot/imported/traffic cones.png-684c0ba367ac99edeb30ea88fd1fc423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Art/Map-Layout-Sheet.png"
-dest_files=["res://.godot/imported/Map-Layout-Sheet.png-52ae5caf52d22f199aef170b800e8a8f.ctex"]
+source_file="res://Resources/Art/Maps/traffic cones.png"
+dest_files=["res://.godot/imported/traffic cones.png-684c0ba367ac99edeb30ea88fd1fc423.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

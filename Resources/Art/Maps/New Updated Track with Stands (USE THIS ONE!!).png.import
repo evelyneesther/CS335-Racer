@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bojum2yk5ie0q"
-path.s3tc="res://.godot/imported/New Updated Track with Stands (USE THIS ONE!!).png-56e1dae07a1752dae1eca55b103795cf.s3tc.ctex"
+path.s3tc="res://.godot/imported/New Updated Track with Stands (USE THIS ONE!!).png-516ed5eb07002acf6bfcb9491d27f623.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Resources/Art/New Updated Track with Stands (USE THIS ONE!!).png"
-dest_files=["res://.godot/imported/New Updated Track with Stands (USE THIS ONE!!).png-56e1dae07a1752dae1eca55b103795cf.s3tc.ctex"]
+source_file="res://Resources/Art/Maps/New Updated Track with Stands (USE THIS ONE!!).png"
+dest_files=["res://.godot/imported/New Updated Track with Stands (USE THIS ONE!!).png-516ed5eb07002acf6bfcb9491d27f623.s3tc.ctex"]
 
 [params]
 
