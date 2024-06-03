@@ -26,6 +26,7 @@ color = Color(0, 0, 0, 0.243137)
 
 [node name="HighScores" type="Panel" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,7 +98,6 @@ text = "Main Menu"
 
 [node name="NameEnter" type="Panel" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

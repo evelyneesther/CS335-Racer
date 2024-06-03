@@ -23,7 +23,7 @@ radius = 3349.91
 size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(17546.5, 6117.5)
+size = Vector2(37656, 13950)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(7434, 2296)
@@ -63,10 +63,10 @@ polygon = PackedVector2Array(19691.2, -17977.5, 12774.2, -17936.8, 12733.5, -185
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 build_mode = 1
-polygon = PackedVector2Array(44086.4, 11749.2, 43576.7, -38299.3, -35012.8, -38299.3, -35828.2, 11341.5)
+polygon = PackedVector2Array(42875.9, 11148.8, 42366.3, -37370.8, -32961.4, -37880.5, -32961.4, 11148.8)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-polygon = PackedVector2Array(-3808.89, -8726.34, -9148.37, -8341.7, -12804.4, -7812.93, -18096.1, -6273.6, -23387.8, -3146.36, -34304, 11676.8, -37056.2, 8516.88, -25741.8, -5447.79, -12365.6, -8105.19, -7651.24, -8833.84)
+polygon = PackedVector2Array(-3808.89, -8726.34, -9148.37, -8341.7, -12804.4, -7812.93, -18096.1, -6273.6, -35939.7, -5771.9, -37223.4, -7120.11, -18922.7, -6991.9, -12365.6, -8105.19, -7651.24, -8833.84)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 polygon = PackedVector2Array(7111.36, -394.996, 20292.4, -298.639, 20966.1, -1982.11, 6630.37, -2029.89)
@@ -248,7 +248,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(25942.3, -31685.8)
+position = Vector2(21869, -34451)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
