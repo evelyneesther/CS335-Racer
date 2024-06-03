@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=21 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
 [ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="8_6540g"]
 [ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="9_n72q7"]
-[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/Maps/traffic cones.png" id="9_pyank"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
 
@@ -253,15 +252,12 @@ script = ExtResource("8_1ly6n")
 position = Vector2(-47860, -18930)
 shape = SubResource("RectangleShape2D_upce0")
 
-[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
-visible = false
-position = Vector2(-31996, -17859)
-scale = Vector2(38.6087, 38.6087)
-texture = ExtResource("9_pyank")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
 position = Vector2(7880.25, -13928)
 shape = SubResource("RectangleShape2D_lxifo")
+
+[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
+unique_name_in_owner = true
 
 [node name="NewLapDetector" type="Area2D" parent="."]
 position = Vector2(-8348, -168)

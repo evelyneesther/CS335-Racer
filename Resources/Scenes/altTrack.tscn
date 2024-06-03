@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopResumeButton.gd" id="8_ftqhy"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/LoopDetector.gd" id="9_h8khn"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="10_smj1q"]
-[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/Maps/traffic cones.png" id="11_v1g6y"]
+[ext_resource type="Texture2D" uid="uid://c7a7hkt1k4utw" path="res://Resources/Art/Maps/Vertical Cones.png" id="12_piudq"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="12_ss556"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="13_5ikn2"]
 
@@ -241,9 +241,9 @@ position = Vector2(-34254, 3317.5)
 shape = SubResource("RectangleShape2D_ioiwj")
 
 [node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
-position = Vector2(-34093, 3520)
-scale = Vector2(38.6087, 38.6087)
-texture = ExtResource("11_v1g6y")
+position = Vector2(-30698, 3577)
+scale = Vector2(20.0833, 20.0833)
+texture = ExtResource("12_piudq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
 position = Vector2(-38668, 16684)
