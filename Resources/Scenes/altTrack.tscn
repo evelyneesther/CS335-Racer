@@ -240,14 +240,21 @@ script = ExtResource("10_smj1q")
 position = Vector2(-34254, 3317.5)
 shape = SubResource("RectangleShape2D_ioiwj")
 
-[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
-position = Vector2(-30698, 3577)
-scale = Vector2(20.0833, 20.0833)
-texture = ExtResource("12_piudq")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
 position = Vector2(-38668, 16684)
 shape = SubResource("RectangleShape2D_g5h5e")
+
+[node name="TrafficConesControl" type="Control" parent="LoopBlock"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TrafficCones" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-30698, 3577)
+scale = Vector2(20.0833, 20.0833)
+texture = ExtResource("12_piudq")
 
 [node name="NewLapDetector" type="Area2D" parent="."]
 position = Vector2(-8348, -168)

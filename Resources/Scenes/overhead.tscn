@@ -27,7 +27,7 @@ size = Vector2(8630, 31147)
 size = Vector2(29312, 8857)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
-size = Vector2(35418, 2296)
+size = Vector2(29996, 2296)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxifo"]
 size = Vector2(25600.5, 10932)
@@ -252,7 +252,7 @@ position = Vector2(44209, -26189)
 script = ExtResource("8_1ly6n")
 
 [node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(-47981, -18870)
+position = Vector2(-45270, -18870)
 shape = SubResource("RectangleShape2D_upce0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
@@ -273,13 +273,13 @@ scale = Vector2(70.599, 66.6631)
 texture = ExtResource("9_pyank")
 
 [node name="Sprite2D" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
-position = Vector2(392, 1084)
-scale = Vector2(93.2778, 93.2778)
+position = Vector2(392, 786.001)
+scale = Vector2(76.3333, 76.3333)
 texture = ExtResource("14_prbxg")
 
 [node name="Sprite2D2" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
-position = Vector2(-43736, 13715)
-scale = Vector2(99.6794, 124.696)
+position = Vector2(-42040, 13207)
+scale = Vector2(67.8953, 84.9348)
 texture = ExtResource("9_pyank")
 
 [node name="Sprite2D3" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]

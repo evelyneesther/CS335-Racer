@@ -80,10 +80,10 @@ flat = true
 script = ExtResource("6_325e5")
 
 [node name="Button" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 1098.0
 offset_top = 6.0
 offset_right = 1141.0
 offset_bottom = 53.0
+flat = true
 script = ExtResource("7_bsdvy")
