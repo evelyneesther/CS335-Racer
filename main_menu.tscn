@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://mb2lxf73oktt"]
+[gd_scene load_steps=7 format=3 uid="uid://tmdr3dcqepnl"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/UI/MainMenu.gd" id="1_4tsyk"]
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="1_shlqa"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Resources/Scripts/UI/StartButton.gd" id="4_5dqbd"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/ModifyButton.gd" id="5_2h33h"]
 
-[node name="Control2" type="Control"]
+[node name="Control3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

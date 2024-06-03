@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfuuuxw17y2as"]
+[gd_scene load_steps=5 format=3 uid="uid://cok6wfrrh3uag"]
 
 [ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="1_gako3"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/LapScreenStartButton.gd" id="1_gltdd"]
