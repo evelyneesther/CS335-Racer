@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=23 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
@@ -12,8 +12,10 @@
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
 [ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="8_6540g"]
 [ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="9_n72q7"]
+[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/Maps/traffic cones.png" id="9_pyank"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
+[ext_resource type="Texture2D" uid="uid://c7a7hkt1k4utw" path="res://Resources/Art/Maps/Vertical Cones.png" id="14_prbxg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uu7r"]
 radius = 3349.91
@@ -44,6 +46,7 @@ scale = Vector2(31.0054, 31.0054)
 texture = ExtResource("3_58hka")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Map"]
+visible = false
 position = Vector2(-176.583, 521.974)
 scale = Vector2(0.0405007, 0.0405007)
 
@@ -249,15 +252,40 @@ position = Vector2(44209, -26189)
 script = ExtResource("8_1ly6n")
 
 [node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(-47860, -18930)
+position = Vector2(-47981, -18870)
 shape = SubResource("RectangleShape2D_upce0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
 position = Vector2(7880.25, -13928)
 shape = SubResource("RectangleShape2D_lxifo")
 
-[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
+[node name="TrafficConesControl" type="Control" parent="LoopBlock"]
 unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TrafficCones" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+unique_name_in_owner = true
+position = Vector2(-39592, -18666)
+scale = Vector2(70.599, 66.6631)
+texture = ExtResource("9_pyank")
+
+[node name="Sprite2D" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(392, 1084)
+scale = Vector2(93.2778, 93.2778)
+texture = ExtResource("14_prbxg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-43736, 13715)
+scale = Vector2(99.6794, 124.696)
+texture = ExtResource("9_pyank")
+
+[node name="Sprite2D3" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-48927, 4335)
+scale = Vector2(48.1087, 48.1087)
+texture = ExtResource("9_pyank")
 
 [node name="NewLapDetector" type="Area2D" parent="."]
 position = Vector2(-8348, -168)
