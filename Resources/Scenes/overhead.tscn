@@ -23,10 +23,10 @@ radius = 3349.91
 size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(37656, 13950)
+size = Vector2(29312, 8857)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
-size = Vector2(7434, 2296)
+size = Vector2(35418, 2296)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxifo"]
 size = Vector2(25600.5, 10932)
@@ -96,12 +96,6 @@ polygon = PackedVector2Array(-27352, -47748, -27312, -46337, -28199, -46216, -28
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Grass"]
 polygon = PackedVector2Array(-13849, -3873, -6467, -3835, -6467, -4634, -2052, -4596, -2052, -5396, 13626, -5396, 13550, -4634, 47038, -4596, 47076, -5357, 49321, -5319, 49321, -6157, 50082, -6157, 50082, -6842, 50691, -6880, 50729, -7565, 51567, -7565, 51567, -9810, 52328, -9772, 52366, -24803, 51681, -24727, 51605, -29180, 50805, -29180, 50691, -34469, 51529, -34279, 51605, -47826, 50805, -47826, 50882, -50795, 50082, -50757, 50082, -51670, 48636, -51518, 48446, -52355, 35812, -52317, 35911, -51532, 29982, -51532, 29953, -50706, 22541, -50734, 22541, -51504, 9911, -51504, 9940, -50848, 6947, -50763, 6890, -50107, -1292, -50021, -1207, -50791, -5027, -50763, -4999, -51504, -16915, -51475, -16887, -52245, -22874, -52302, -22845, -51618, -26665, -51532, -33222, -49993, -35560, -50021, -35507, -30047, -33267, -29855, -28147, -23967, -26611, -23967, -26643, -23199, -25875, -23167, -25875, -22495, -23635, -22431, -23607, -21767, -22880, -21729, -22880, -20974, -14619, -21010, -14583, -21693, -9446, -21729, -9411, -22447, -2047, -22411, -2011, -23165, -467, -23130, -503, -23992, 252, -23920, 359, -25428, 934, -25357, 970, -32864, 1617, -32792, 1617, -38826, 2443, -38826, 2443, -39652, 3233, -39652, 3161, -40227, 3987, -40299, 3987, -40981, 6142, -41017, 6142, -40299, 6861, -40299, 6933, -39616, 7687, -39616, 7651, -32181, 8405, -32145, 8405, -30637, 9231, -30673, 9124, -30026, 10596, -29882, 10668, -29164, 16523, -29164, 16595, -29846, 30747, -29918, 30747, -29236, 33728, -29128, 33656, -29918, 37428, -29882, 37428, -29236, 38110, -29236, 38182, -28517, 38936, -28446, 39008, -21010, 38074, -21046, 38146, -19645, 37248, -19538, 37356, -18855, 26365, -18712, 26257, -19502, 18067, -19466, 18139, -20220, 13649, -20220, 13613, -20939, 7651, -21010, 7687, -20220, -539, -20256, -431, -20974, -8010, -21010, -7974, -20256, -12500, -20328, -12500, -19610, -15373, -19574, -15337, -18819, -17744, -18747, -17708, -18029, -19180, -18065, -19180, -17311, -19935, -17383, -19971, -15946, -20689, -15730, -20689, -13647, -21479, -13647, -21336, -7720, -20581, -7541, -20581, -6930, -19899, -6894, -19827, -6176, -18390, -6104, -18318, -5458, -16235, -5422, -16091, -4595, -14080, -4595, -47646, -1987, -47463, -64309, 64346, -64021, 64346, 10008, -47463, 10295, -47847, -2267, -13958, -4560)
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Vehicle" parent="." instance=ExtResource("4_h3lf8")]
 unique_name_in_owner = true
@@ -248,7 +242,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(21869, -34451)
+position = Vector2(6974, -31904.5)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
@@ -256,7 +250,7 @@ position = Vector2(44209, -26189)
 script = ExtResource("8_1ly6n")
 
 [node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(-39363, -18588)
+position = Vector2(-47860, -18930)
 shape = SubResource("RectangleShape2D_upce0")
 
 [node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
@@ -284,9 +278,6 @@ unique_name_in_owner = true
 volume_db = 10.0
 script = ExtResource("11_ea1w1")
 
-[node name="FinishLine" type="Node2D" parent="."]
-position = Vector2(4768, -3264)
-
 [node name="Hell Portal" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hell Portal"]
@@ -311,4 +302,5 @@ polygon = PackedVector2Array(-4121, -54900, -3801, -54996, -3801, -55524, -4297,
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
 [connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
+[connection signal="body_entered" from="Hell Portal" to="Vehicle" method="_on_hell_portal_body_entered"]
 [connection signal="input_event" from="Hell Portal" to="." method="_on_hell_portal_input_event"]

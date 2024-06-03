@@ -3,7 +3,7 @@ extends Node2D
 
 # this script can also be used for future new levels :D
 
-@onready var finish_line_pos = $FinishLine.global_position
+#@onready var finish_line_pos = $FinishLine.global_position
 
 var first_lap_finished = false
 var laps_completed = 0
