@@ -6,7 +6,7 @@ extends Node2D
 #@onready var finish_line_pos = $FinishLine.global_position
 
 var first_lap_finished = false
-var laps_completed = 0
+var laps_completed = 1
 var race_finished = false
 var has_looped=false
 
@@ -36,8 +36,9 @@ func _on_new_lap_detector_body_entered(body):
 		laps_completed+=1
 	
 	# check laps if max
-	if laps_completed >= ManagerGame.laps_max and race_finished == false:
+	if laps_completed > ManagerGame.laps_max and race_finished == false:
 		#ManagerGame.newScore(ManagerGame.fastestLap, "TMP")
+		laps_completed-=1
 		ManagerGame.race_finished.emit()
 		print(ManagerGame.fastestLap)
 		race_finished = true
