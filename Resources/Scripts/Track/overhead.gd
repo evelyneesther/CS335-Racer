@@ -37,10 +37,11 @@ func _on_new_lap_detector_body_entered(body):
 	
 	# check laps if max
 	if laps_completed >= ManagerGame.laps_max and race_finished == false:
-		ManagerGame.newScore(ManagerGame.fastestLap, "TMP")
+		#ManagerGame.newScore(ManagerGame.fastestLap, "TMP")
 		ManagerGame.race_finished.emit()
 		print(ManagerGame.fastestLap)
 		race_finished = true
+		%Vehicle.canMove=false
 
 
 func _on_loop_detector_player_detected():

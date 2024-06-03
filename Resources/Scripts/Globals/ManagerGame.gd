@@ -16,7 +16,6 @@ var scoreFile
 
 var global_level_ref = null
 
-
 func readScores():
 
 	if currMap=="res://Resources/Scenes/overhead.tscn":
