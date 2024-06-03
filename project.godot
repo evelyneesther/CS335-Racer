@@ -13,7 +13,7 @@ config_version=5
 config/name="Symphonic Speedway"
 run/main_scene="res://Resources/Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Resources/Art/icon.svg"
+config/icon="res://Resources/Art/symphonic speedway logo.png"
 
 [audio]
 
