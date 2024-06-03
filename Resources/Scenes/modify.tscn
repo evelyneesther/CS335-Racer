@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbb8wmds0a1kn" path="res://Resources/Art/Red/Red -.png" id="2_jfttj"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/CarSprite.gd" id="3_jkr0n"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="4_pnntv"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="5_3qie8"]
+[ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="5_b1q0w"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -55,7 +55,8 @@ offset_bottom = 341.0
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_3qie8")
+theme_override_fonts/font = ExtResource("5_b1q0w")
+theme_override_font_sizes/font_size = 32
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Dorsals"
@@ -74,7 +75,8 @@ offset_bottom = 200.0
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_3qie8")
+theme_override_fonts/font = ExtResource("5_b1q0w")
+theme_override_font_sizes/font_size = 32
 item_count = 5
 selected = 0
 popup/item_0/text = "Racing Red"
@@ -99,7 +101,8 @@ offset_bottom = 408.0
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_3qie8")
+theme_override_fonts/font = ExtResource("5_b1q0w")
+theme_override_font_sizes/font_size = 32
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Spoiler"
@@ -118,7 +121,8 @@ offset_bottom = 268.0
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_3qie8")
+theme_override_fonts/font = ExtResource("5_b1q0w")
+theme_override_font_sizes/font_size = 32
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Front Wing"

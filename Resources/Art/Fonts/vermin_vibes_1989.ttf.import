@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dnmqvgxeagnqt"
-path="res://.godot/imported/AeogoPixellated-DYYEd.ttf-ee4d8bced72abe4fc10fb3e36fe15c31.fontdata"
+uid="uid://cmn6qps3tdvq7"
+path="res://.godot/imported/vermin_vibes_1989.ttf-b5c514045a1aa1e8e8974da88825ac9b.fontdata"
 
 [deps]
 
-source_file="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf"
-dest_files=["res://.godot/imported/AeogoPixellated-DYYEd.ttf-ee4d8bced72abe4fc10fb3e36fe15c31.fontdata"]
+source_file="res://Resources/Art/Fonts/vermin_vibes_1989.ttf"
+dest_files=["res://.godot/imported/vermin_vibes_1989.ttf-b5c514045a1aa1e8e8974da88825ac9b.fontdata"]
 
 [params]
 

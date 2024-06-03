@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://mj5o734np0d"]
 
 [ext_resource type="Texture2D" uid="uid://ccxckg2jqigrw" path="res://Resources/Art/Map Selection Screen.png" id="1_yx8cf"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="2_cd8k8"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Art/Fonts/AeogoPixellated-DYYEd.ttf" id="2_cd8k8"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/LevelSelectBackButton.gd" id="3_eiodi"]
 [ext_resource type="FontFile" uid="uid://6oi1n8ilqscb" path="res://Resources/Art/Fonts/Monocraft.otf" id="3_jnko8"]
 [ext_resource type="Texture2D" uid="uid://cc460bkmlrmwi" path="res://Resources/Art/Other Track Layout.png" id="4_wyvmm"]

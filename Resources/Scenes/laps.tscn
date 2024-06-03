@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Resources/Scripts/UI/laps.gd" id="1_g4xaf"]
 [ext_resource type="Texture2D" uid="uid://ccpe4ia5emiu3" path="res://Resources/Art/Actual Number of Laps Screen.png" id="2_cc7ce"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="3_abnq6"]
+[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Art/Fonts/AeogoPixellated-DYYEd.ttf" id="3_abnq6"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/ModMenuBackButton.gd" id="4_ocnj4"]
 
 [node name="laps" type="Control"]
@@ -52,7 +52,7 @@ offset_bottom = 249.6
 unique_name_in_owner = true
 layout_mode = 2
 min_value = 1.0
-value = 1.0
+value = 5.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="Panel"]
 layout_mode = 2
