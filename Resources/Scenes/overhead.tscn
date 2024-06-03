@@ -1,48 +1,36 @@
-[gd_scene load_steps=25 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=23 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
-[ext_resource type="Texture2D" uid="uid://bhum8h5tt1558" path="res://Resources/Art/Track layout option 1.png" id="3_cp05x"]
+[ext_resource type="Texture2D" uid="uid://cj7w7hiek6cgc" path="res://Resources/Art/Maps/minnow meadow.png" id="3_58hka"]
 [ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_h3lf8"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="5_odxm5"]
+[ext_resource type="FontFile" uid="uid://cmn6qps3tdvq7" path="res://Resources/Art/Fonts/vermin_vibes_1989.ttf" id="5_us1g8"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Speedometer.gd" id="6_cr3gc"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopMenu.gd" id="7_5057j"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/LoopDetector.gd" id="7_h1y4w"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopResumeButton.gd" id="7_jcu66"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
-[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/traffic cones.png" id="9_pyank"]
+[ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="8_6540g"]
+[ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="9_n72q7"]
+[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/Maps/traffic cones.png" id="9_pyank"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
+[ext_resource type="Texture2D" uid="uid://c7a7hkt1k4utw" path="res://Resources/Art/Maps/Vertical Cones.png" id="14_prbxg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3uu7r"]
+radius = 3349.91
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cexyb"]
 size = Vector2(8630, 31147)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gsgn"]
-size = Vector2(58519, 6322)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wod2s"]
-size = Vector2(60313, 8031)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eutnp"]
-size = Vector2(24262, 10679)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lt25"]
-size = Vector2(14096, 23237)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tak4e"]
-size = Vector2(4186, 23123.1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxcyv"]
-size = Vector2(34343, 8713)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ximso"]
-size = Vector2(5809, 21272)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(20660, 5264)
+size = Vector2(29312, 8857)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
-size = Vector2(7434, 2296)
+size = Vector2(35418, 2296)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxifo"]
+size = Vector2(25600.5, 10932)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabs5"]
 size = Vector2(14829.5, 7151)
@@ -55,92 +43,83 @@ script = ExtResource("1_r0xw4")
 [node name="Map" type="Sprite2D" parent="."]
 position = Vector2(8524, -26924)
 scale = Vector2(31.0054, 31.0054)
-texture = ExtResource("3_cp05x")
+texture = ExtResource("3_58hka")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Map"]
+visible = false
 position = Vector2(-176.583, 521.974)
 scale = Vector2(0.0405007, 0.0405007)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-position = Vector2(9879.46, -223.776)
-scale = Vector2(0.985039, 0.985039)
-build_mode = 1
-polygon = PackedVector2Array(28200.9, 9146.85, 13196.4, 8713.36, 2736.94, 8173.28, 1231.42, 2211.07, 479.162, 8404.75, -20626.6, 9071.73, -24342.2, 8088.01, -28439.5, 5793.68, -30132.9, 3006.98, -30692.4, -1768.05, -37315.1, -6114.22, -37108.1, -22153.6, -36797.7, -28983.3, -31209.8, -32294.7, -25712.7, -35576.3, -11838.1, -35494.1, -5903.33, -35494.1, -5861.71, -29191.8, -6089.11, -19874.4, -5625.17, -18665.3, -44.6758, -18542.4, -167.514, -17592.2, 9087.97, -17498.8, 9476.79, -18569.9, 14855.3, -18350.6, 15755.7, -19397.2, 15853.2, -24361.5, 16004.5, -27383.7, 16062.3, -28946.1, 16583.1, -31608.9, 21242.8, -31637.4, 32327.7, -31348, 35366.2, -31261.8, 36784.4, -29264.9, 36813.8, -26225.4, 36726.5, -22376.8, 36668.6, -19077.4, 36700.1, -17738.4, 35398.6, -14616.7, 33593.6, -11303.1, 23087.4, -11071.7, 33831.2, -10202.7, 34271.8, 8799.66)
+polygon = PackedVector2Array(-30790.6, -15262.7, -29033.8, -15148, -28919.2, -31298.7, -30714.1, -31222.2)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-position = Vector2(9175.49, 181.562)
-build_mode = 1
-polygon = PackedVector2Array(22168, -19304, 22464, -19224, 28664, -19160, 29128, -19400, 29208, -19912, 29176, -24720, 28840, -24984, 22784, -24968, 22280, -24888, 22064, -24544, 22048, -19496)
+polygon = PackedVector2Array(-61.2974, -21885.1, -128.987, -9503.57, 551.09, -8959.66, 24157.9, -9027.35, 24157.9, -13789.5, 19939.7, -13858, 19804.3, -14810.4, 12320.2, -14946.6, 12524.9, -14129.5, 3136.02, -14198, 3136.02, -22225.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/StaticBody2D"]
+position = Vector2(-12923, -20082.2)
+shape = SubResource("CircleShape2D_3uu7r")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-position = Vector2(9535.43, -0.0038884)
-build_mode = 1
-polygon = PackedVector2Array(-12240, -25328, -12064, -24888, -12064, -23368, -12064, -13432, -11696, -13024, -9968, -13024, 1968, -12992, 15968, -12960, 16080, -12864, 16344, -11984, 16344, -10464, 16416, -3680, 16232, -3224, 12208, -3176, -7184, -3176, -17912, -3248, -18864, -3448, -18848, -4648, -18776, -9088, -18776, -14920, -18712, -25024, -18544, -25464)
+polygon = PackedVector2Array(19691.2, -17977.5, 12774.2, -17936.8, 12733.5, -18503, 8445.24, -18543.7, 7555.72, -19555, 7596.34, -25501.3, 8364.81, -26472, 15807.4, -26553.3, 16009.7, -26553.3, 16374.4, -27403, 17911.4, -27645.8, 19407.7, -27403, 21632.7, -27443.6, 21996.6, -27281.1, 25435.2, -27362.4, 25678.1, -27160.1, 27619.6, -27160.1, 28873.8, -26755.5, 28833.2, -19312.1, 27740.6, -18503, 19570.1, -18422.6)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-polygon = PackedVector2Array(-20914.3, -8199.16, -21064, -25103.9, -18949, -25115.9, -19035, -8101.21)
+build_mode = 1
+polygon = PackedVector2Array(42875.9, 11148.8, 42366.3, -37370.8, -32961.4, -37880.5, -32961.4, 11148.8)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(-3808.89, -8726.34, -9148.37, -8341.7, -12804.4, -7812.93, -18096.1, -6273.6, -35939.7, -5771.9, -37223.4, -7120.11, -18922.7, -6991.9, -12365.6, -8105.19, -7651.24, -8833.84)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(7111.36, -394.996, 20292.4, -298.639, 20966.1, -1982.11, 6630.37, -2029.89)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(40111.8, -21608.8, 40160.4, -8620.42, 41554.8, -7898.94, 41699.7, -8043.07, 41747.5, -22234.7, 40641.4, -22138.3)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(-20550.4, -33566.7, -7417.91, -33566.7, -6647.85, -34625, -6791.99, -35491.4, -21127.8, -35395.1, -20839.5, -34384.5)
 
 [node name="EnteredPitStop" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnteredPitStop"]
-position = Vector2(-26301, -32212.5)
+position = Vector2(-32825, -38616)
 shape = SubResource("RectangleShape2D_cexyb")
 
 [node name="Grass" type="Area2D" parent="."]
+visible = false
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Grass"]
-position = Vector2(14528, -4894)
-shape = SubResource("RectangleShape2D_3gsgn")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass"]
+position = Vector2(3048.97, -10740)
+scale = Vector2(1.25574, 1.25574)
+polygon = PackedVector2Array(-6414.52, 2011.55, -10475.1, 1981.29, -10505.3, 2496.52, -13506, 2496.52, -13474.9, 1829.99, -14748.2, 1860.25, -14808.8, 1193.71, -15293.7, 1314.75, -15233.2, -2291.88, -14778.5, -2291.88, -14718, -3443.4, -13566.5, -3443.4, -13506, -4019.15, -12415, -4019.15, -12293.1, -4655.43, -9414.34, -4594.91, -9353.82, -5261.45, -4081.24, -5200.93, -4081.24, -4655.43, 3616.21, -4625.17, 3646.48, -5231.19, 7798.61, -5231.19, 7828.87, -4625.17, 10222.7, -4625.17, 10222.7, -4049.41, 11980.2, -4019.15, 11980.2, -3413.14, 28011.4, -3382.88, 27950.9, -4049.41, 29102.4, -4019.15, 29193.2, -4655.43, 29678.1, -4594.91, 29738.7, -5231.19, 30314.4, -5231.19, 30314.4, -5716.16, 30981.7, -5776.68, 30921.2, -8170.49, 31527.2, -8140.23, 31497, -13564.9, 30890.2, -13564.9, 30859.9, -15261.9, 30253.9, -15261.9, 30253.9, -16413.4, 29738.7, -16443.7, 29738.7, -17049.7, 27920.6, -17049.7, 28041.6, -17655.7, 9586.4, -17655.7, 9616.66, -17080, 7192.59, -17080, 7253.11, -17686, 6586.57, -17625.5, 6616.83, -18231.5, 5950.3, -18201.2, 6041.08, -23565.4, 5404.8, -23565.4, 5404.8, -24747.2, 4797.99, -24716.9, 4829.04, -25292.7, 4222.23, -25353.2, 4222.23, -25959.2, 3070.72, -25959.2, 3131.24, -26535, -474.599, -26535, -474.599, -25989.5, -1777.42, -25928.9, -1656.37, -25353.2, -2322.91, -25322.9, -2262.39, -24868.2, -2928.93, -24807.7, -2868.41, -23625.9, -3444.16, -23686.4, -3383.64, -20656.3, -4081.24, -20595.8, -4019.92, -14776.9, -4717.51, -14746.7, -4626.73, -12443.7, -5202.49, -12292.4, -5232.75, -11746.9, -11839.2, -11716.6, -11839.2, -11201.4, -17748.1, -11049.3, -17687.6, -11746.9, -19505.6, -11686.3, -19445.1, -12352.9, -20051.1, -12292.4, -20051.1, -12958.9, -20626.9, -12898.4, -20596.6, -14170.9, -21233.7, -14170.9, -21233.7, -16534.5, -21809.4, -16443.7, -21809.4, -25959.2, -21111.8, -25898.7, -21172.3, -28899.3, -20626.9, -28899.3, -20626.9, -29505.3, -20051.1, -29444.8, -19990.6, -30141.6, -14112, -30111.3, -14112, -29505.3, -7050.8, -29444.8, -6990.28, -28869, -3505.48, -28838, -3505.48, -28323.5, 6041.08, -28262.2, 6041.08, -28899.3, 7313.63, -28899.3, 7313.63, -29475, 13677.2, -29413.7, 13707.5, -28929.6, 26163.1, -28838, 26163.1, -29475, 29768.9, -29505.3, 29738.7, -30081.1, 33284.8, -30050.8, 33315, -29505.3, 33951.3, -29505.3, 33921, -28869, 34406, -28899.3, 34496.8, -27323.3, 34527.1, -27110.7, 35012, -27141, 35133.1, -24747.2, 34375.8, -24716.9, 34436.3, -15898.2, 35042.3, -15837.7, 35072.6, -11837.6, 35678.6, -11746.9, 35708.8, -3958.63, 36254.3, -3988.89, 36314.9, -2322.15, 35557.5, -2261.62, 35648.3, -533.56, 34436.3, -442.776, 34496.8, 42.1963, 33860.5, 163.24, 33981.6, 678.474, 32648.5, 708.735, 32678.7, 1254.23, 29678.1, 1314.75, 29708.4, 1799.73, 25557.1, 1860.25, 25647.8, 1254.23, 16071.8, 1254.23, 16071.8, 1860.25, 11949.9, 1920.77, 11932.4, 1321.92, -6517.25, 1321.92)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Grass"]
-position = Vector2(30049, -51149)
-shape = SubResource("RectangleShape2D_wod2s")
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Grass"]
+polygon = PackedVector2Array(-27352, -47748, -27312, -46337, -28199, -46216, -28078, -29242, -29529, -31218, -29489, -46982)
 
-[node name="Sprite2D_Grass#CollisionShape2D4" type="CollisionShape2D" parent="Grass"]
-position = Vector2(4279, -23235.5)
-shape = SubResource("RectangleShape2D_eutnp")
-
-[node name="Sprite2D_Grass#CollisionShape2D5" type="CollisionShape2D" parent="Grass"]
-position = Vector2(64560, -38326)
-shape = SubResource("RectangleShape2D_8lt25")
-
-[node name="Sprite2D_Grass#CollisionShape2D6" type="CollisionShape2D" parent="Grass"]
-position = Vector2(46252, -17674)
-shape = SubResource("RectangleShape2D_tak4e")
-
-[node name="Sprite2D_Grass#CollisionShape2D7" type="CollisionShape2D" parent="Grass"]
-position = Vector2(-9228, -52374)
-shape = SubResource("RectangleShape2D_qxcyv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass"]
-position = Vector2(8807, -44312)
-shape = SubResource("RectangleShape2D_ximso")
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Grass"]
+polygon = PackedVector2Array(-13849, -3873, -6467, -3835, -6467, -4634, -2052, -4596, -2052, -5396, 13626, -5396, 13550, -4634, 47038, -4596, 47076, -5357, 49321, -5319, 49321, -6157, 50082, -6157, 50082, -6842, 50691, -6880, 50729, -7565, 51567, -7565, 51567, -9810, 52328, -9772, 52366, -24803, 51681, -24727, 51605, -29180, 50805, -29180, 50691, -34469, 51529, -34279, 51605, -47826, 50805, -47826, 50882, -50795, 50082, -50757, 50082, -51670, 48636, -51518, 48446, -52355, 35812, -52317, 35911, -51532, 29982, -51532, 29953, -50706, 22541, -50734, 22541, -51504, 9911, -51504, 9940, -50848, 6947, -50763, 6890, -50107, -1292, -50021, -1207, -50791, -5027, -50763, -4999, -51504, -16915, -51475, -16887, -52245, -22874, -52302, -22845, -51618, -26665, -51532, -33222, -49993, -35560, -50021, -35507, -30047, -33267, -29855, -28147, -23967, -26611, -23967, -26643, -23199, -25875, -23167, -25875, -22495, -23635, -22431, -23607, -21767, -22880, -21729, -22880, -20974, -14619, -21010, -14583, -21693, -9446, -21729, -9411, -22447, -2047, -22411, -2011, -23165, -467, -23130, -503, -23992, 252, -23920, 359, -25428, 934, -25357, 970, -32864, 1617, -32792, 1617, -38826, 2443, -38826, 2443, -39652, 3233, -39652, 3161, -40227, 3987, -40299, 3987, -40981, 6142, -41017, 6142, -40299, 6861, -40299, 6933, -39616, 7687, -39616, 7651, -32181, 8405, -32145, 8405, -30637, 9231, -30673, 9124, -30026, 10596, -29882, 10668, -29164, 16523, -29164, 16595, -29846, 30747, -29918, 30747, -29236, 33728, -29128, 33656, -29918, 37428, -29882, 37428, -29236, 38110, -29236, 38182, -28517, 38936, -28446, 39008, -21010, 38074, -21046, 38146, -19645, 37248, -19538, 37356, -18855, 26365, -18712, 26257, -19502, 18067, -19466, 18139, -20220, 13649, -20220, 13613, -20939, 7651, -21010, 7687, -20220, -539, -20256, -431, -20974, -8010, -21010, -7974, -20256, -12500, -20328, -12500, -19610, -15373, -19574, -15337, -18819, -17744, -18747, -17708, -18029, -19180, -18065, -19180, -17311, -19935, -17383, -19971, -15946, -20689, -15730, -20689, -13647, -21479, -13647, -21336, -7720, -20581, -7541, -20581, -6930, -19899, -6894, -19827, -6176, -18390, -6104, -18318, -5458, -16235, -5422, -16091, -4595, -14080, -4595, -47646, -1987, -47463, -64309, 64346, -64021, 64346, 10008, -47463, 10295, -47847, -2267, -13958, -4560)
 
 [node name="Vehicle" parent="." instance=ExtResource("4_h3lf8")]
 unique_name_in_owner = true
-position = Vector2(16582, -11584)
+position = Vector2(20742, -6784)
 collision_layer = 3
 
 [node name="UICanvas" type="CanvasLayer" parent="."]
 
 [node name="TextEdit" type="TextEdit" parent="UICanvas"]
 layout_direction = 1
-offset_left = 940.0
-offset_top = 549.0
-offset_right = 1157.0
-offset_bottom = 637.0
+offset_left = 936.0
+offset_top = 533.0
+offset_right = 1153.0
+offset_bottom = 668.0
 theme_override_colors/background_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_odxm5")
-theme_override_font_sizes/font_size = 75
-text = "0"
+theme_override_fonts/font = ExtResource("5_us1g8")
+theme_override_font_sizes/font_size = 140
+placeholder_text = "130"
 editable = false
 context_menu_enabled = false
 shortcut_keys_enabled = false
@@ -174,19 +153,21 @@ offset_bottom = 550.0
 [node name="TextEdit" type="TextEdit" parent="UICanvas/PitStopMenu/MarginContainer"]
 layout_direction = 1
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_odxm5")
-text = "										   Modify Car"
+theme_override_fonts/font = ExtResource("8_6540g")
+theme_override_font_sizes/font_size = 32
+text = "				  Modify Car"
 draw_tabs = true
 
 [node name="BackWingButton" type="OptionButton" parent="UICanvas/PitStopMenu"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 488.0
-offset_top = 306.0
-offset_right = 709.0
-offset_bottom = 331.0
+offset_top = 327.0
+offset_right = 712.0
+offset_bottom = 365.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_odxm5")
+theme_override_fonts/font = ExtResource("8_6540g")
+theme_override_font_sizes/font_size = 32
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Spoiler"
@@ -201,8 +182,8 @@ offset_left = 484.0
 offset_top = 144.0
 offset_right = 731.0
 offset_bottom = 169.0
+theme = ExtResource("9_n72q7")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_odxm5")
 item_count = 5
 selected = 0
 popup/item_0/text = "Racing Red"
@@ -220,11 +201,11 @@ popup/item_4/id = 4
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 485.0
-offset_top = 198.0
-offset_right = 748.0
-offset_bottom = 223.0
+offset_top = 202.0
+offset_right = 770.0
+offset_bottom = 240.0
+theme = ExtResource("9_n72q7")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_odxm5")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Front Wing"
@@ -236,11 +217,11 @@ popup/item_1/id = 1
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 487.0
-offset_top = 252.0
+offset_top = 264.0
 offset_right = 716.0
-offset_bottom = 277.0
+offset_bottom = 302.0
+theme = ExtResource("9_n72q7")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_odxm5")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Dorsals"
@@ -254,7 +235,7 @@ offset_left = 533.0
 offset_top = 457.0
 offset_right = 671.0
 offset_bottom = 499.0
-theme_override_fonts/font = ExtResource("5_odxm5")
+theme = ExtResource("9_n72q7")
 text = "Resume"
 script = ExtResource("7_jcu66")
 
@@ -263,20 +244,47 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(29865, -26407)
+position = Vector2(6974, -31904.5)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
-position = Vector2(36697, -27185)
+position = Vector2(44209, -26189)
 script = ExtResource("8_1ly6n")
 
 [node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(3004, 1587)
+position = Vector2(-47981, -18870)
 shape = SubResource("RectangleShape2D_upce0")
 
-[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
-position = Vector2(3282.61, 1472)
-scale = Vector2(38.6087, 38.6087)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
+position = Vector2(7880.25, -13928)
+shape = SubResource("RectangleShape2D_lxifo")
+
+[node name="TrafficConesControl" type="Control" parent="LoopBlock"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TrafficCones" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+unique_name_in_owner = true
+position = Vector2(-39592, -18666)
+scale = Vector2(70.599, 66.6631)
+texture = ExtResource("9_pyank")
+
+[node name="Sprite2D" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(392, 1084)
+scale = Vector2(93.2778, 93.2778)
+texture = ExtResource("14_prbxg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-43736, 13715)
+scale = Vector2(99.6794, 124.696)
+texture = ExtResource("9_pyank")
+
+[node name="Sprite2D3" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-48927, 4335)
+scale = Vector2(48.1087, 48.1087)
 texture = ExtResource("9_pyank")
 
 [node name="NewLapDetector" type="Area2D" parent="."]
@@ -286,7 +294,7 @@ collision_mask = 2
 script = ExtResource("10_iqxyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
-position = Vector2(16728.8, -11532.5)
+position = Vector2(22166, -5733)
 shape = SubResource("RectangleShape2D_dabs5")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
@@ -294,8 +302,10 @@ unique_name_in_owner = true
 volume_db = 10.0
 script = ExtResource("11_ea1w1")
 
-[node name="FinishLine" type="Node2D" parent="."]
-position = Vector2(4768, -3264)
+[node name="Hell Portal" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hell Portal"]
+polygon = PackedVector2Array(-4121, -54900, -3801, -54996, -3801, -55524, -4297, -55460)
 
 [connection signal="body_entered" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_entered"]
 [connection signal="body_exited" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_exited"]
@@ -316,3 +326,5 @@ position = Vector2(4768, -3264)
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
 [connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
+[connection signal="body_entered" from="Hell Portal" to="Vehicle" method="_on_hell_portal_body_entered"]
+[connection signal="input_event" from="Hell Portal" to="." method="_on_hell_portal_input_event"]

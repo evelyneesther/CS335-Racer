@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://yw75lbrm6ch7"]
+
+[ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="1_g1lqc"]
+
+[resource]
+default_font = ExtResource("1_g1lqc")
+default_font_size = 32

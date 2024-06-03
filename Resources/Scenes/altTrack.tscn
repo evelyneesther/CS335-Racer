@@ -1,16 +1,17 @@
-[gd_scene load_steps=19 format=3 uid="uid://cic7ihym18ik3"]
+[gd_scene load_steps=21 format=3 uid="uid://bvjhmqcc2ttk1"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_yqg7v"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_6vaaa"]
-[ext_resource type="Texture2D" uid="uid://cc460bkmlrmwi" path="res://Resources/Art/Other Track Layout.png" id="3_xmou1"]
+[ext_resource type="Texture2D" uid="uid://cc460bkmlrmwi" path="res://Resources/Art/Maps/Other Track Layout.png" id="3_xmou1"]
 [ext_resource type="PackedScene" uid="uid://dkeqt4sok007o" path="res://Resources/Scenes/vehicle.tscn" id="4_c6n2v"]
-[ext_resource type="FontFile" uid="uid://dnmqvgxeagnqt" path="res://Resources/Scripts/UI/AeogoPixellated-DYYEd.ttf" id="5_ifbrn"]
+[ext_resource type="FontFile" uid="uid://cmn6qps3tdvq7" path="res://Resources/Art/Fonts/vermin_vibes_1989.ttf" id="5_3y4ch"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Speedometer.gd" id="6_6ary1"]
+[ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="7_ab7gt"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopMenu.gd" id="7_wy7nj"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/Popups/PitStopResumeButton.gd" id="8_ftqhy"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/LoopDetector.gd" id="9_h8khn"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="10_smj1q"]
-[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/traffic cones.png" id="11_v1g6y"]
+[ext_resource type="Texture2D" uid="uid://c7a7hkt1k4utw" path="res://Resources/Art/Maps/Vertical Cones.png" id="12_piudq"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="12_ss556"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="13_5ikn2"]
 
@@ -27,7 +28,10 @@ size = Vector2(7924, 3327)
 size = Vector2(4224, 27244)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pbf5"]
-size = Vector2(30689.8, 5504.5)
+size = Vector2(30689.8, 5266.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4h0c"]
+size = Vector2(14464, 7808)
 
 [node name="AltTrack" type="Node2D"]
 script = ExtResource("1_yqg7v")
@@ -45,7 +49,7 @@ scale = Vector2(0.0405007, 0.0405007)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 build_mode = 1
-polygon = PackedVector2Array(-12321, -1086.22, -19995.4, -1314.77, -19766.8, -7538.19, -17017.8, -10249.7, -12665, -13762.4, -15833.7, -17656.5, -16139.5, -23460.3, -12282.8, -26362.1, -5486.78, -27125.8, 4821.88, -27049.4, 17384.2, -26896.5, 24752.7, -25789.6, 26241.9, -24109.3, 24409.5, -23613.2, 19674.5, -25178, 15627.5, -26469.7, 8837.04, -26453.7, -1276.52, -26517.4, -8243.72, -26308.8, -14263.3, -24109.3, -15740.5, -22311.9, -15419.6, -17720.2, -7525.42, -12961.3, -3196.5, -13603.9, 3145.58, -13474.9, 2931.36, -12704.1, 1731.27, -11804.2, -3411.51, -11718.2, -3839.94, -10732.3, -8468.29, -10646.3, -10440, -3104.15)
+polygon = PackedVector2Array(-12321, -1086.22, -19995.4, -1314.77, -19766.8, -7538.19, -17017.8, -10249.7, -12665, -13762.4, -15833.7, -17656.5, -16139.5, -23460.3, -12282.8, -26362.1, -5486.78, -27125.8, 4821.88, -27049.4, 17384.2, -26896.5, 24752.7, -25789.6, 26241.9, -24109.3, 24409.5, -23613.2, 19674.5, -25178, 15627.5, -26469.7, 8837.04, -26453.7, -1276.52, -26517.4, -8243.72, -26308.8, -14263.3, -24109.3, -15740.5, -22311.9, -15740.5, -17797.5, -10640.7, -11969, -5068.7, -12954.1, 1873.82, -12825.9, 2931.36, -12704.1, 1731.27, -11804.2, -3411.51, -11718.2, -3839.94, -10732.3, -8468.29, -10646.3, -10440, -3104.15)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 build_mode = 1
@@ -94,16 +98,20 @@ collision_layer = 3
 
 [node name="TextEdit" type="TextEdit" parent="UICanvas"]
 layout_direction = 1
-offset_left = 940.0
-offset_top = 549.0
-offset_right = 1157.0
-offset_bottom = 637.0
+offset_left = 963.0
+offset_top = 538.0
+offset_right = 1180.0
+offset_bottom = 673.0
 theme_override_colors/background_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_ifbrn")
-theme_override_font_sizes/font_size = 75
-text = "0"
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("5_3y4ch")
+theme_override_font_sizes/font_size = 140
+placeholder_text = "130"
 editable = false
 context_menu_enabled = false
 shortcut_keys_enabled = false
@@ -125,6 +133,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("7_ab7gt")
 script = ExtResource("7_wy7nj")
 
 [node name="MarginContainer" type="MarginContainer" parent="UICanvas/PitStopMenu"]
@@ -137,8 +146,7 @@ offset_bottom = 550.0
 [node name="TextEdit" type="TextEdit" parent="UICanvas/PitStopMenu/MarginContainer"]
 layout_direction = 1
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_ifbrn")
-text = "										   Modify Car"
+text = "				 Modify Car"
 draw_tabs = true
 
 [node name="BackWingButton" type="OptionButton" parent="UICanvas/PitStopMenu"]
@@ -149,7 +157,6 @@ offset_top = 306.0
 offset_right = 709.0
 offset_bottom = 331.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_ifbrn")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Spoiler"
@@ -165,7 +172,6 @@ offset_top = 144.0
 offset_right = 731.0
 offset_bottom = 169.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_ifbrn")
 item_count = 5
 selected = 0
 popup/item_0/text = "Racing Red"
@@ -187,7 +193,6 @@ offset_top = 198.0
 offset_right = 748.0
 offset_bottom = 223.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_ifbrn")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Front Wing"
@@ -203,7 +208,6 @@ offset_top = 252.0
 offset_right = 716.0
 offset_bottom = 277.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_ifbrn")
 item_count = 2
 selected = 0
 popup/item_0/text = "Default Dorsals"
@@ -217,7 +221,6 @@ offset_left = 533.0
 offset_top = 457.0
 offset_right = 671.0
 offset_bottom = 499.0
-theme_override_fonts/font = ExtResource("5_ifbrn")
 text = "Resume"
 script = ExtResource("8_ftqhy")
 
@@ -238,9 +241,9 @@ position = Vector2(-34254, 3317.5)
 shape = SubResource("RectangleShape2D_ioiwj")
 
 [node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
-position = Vector2(-34093, 3520)
-scale = Vector2(38.6087, 38.6087)
-texture = ExtResource("11_v1g6y")
+position = Vector2(-30698, 3577)
+scale = Vector2(20.0833, 20.0833)
+texture = ExtResource("12_piudq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
 position = Vector2(-38668, 16684)
@@ -253,8 +256,12 @@ collision_mask = 2
 script = ExtResource("12_ss556")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NewLapDetector"]
-position = Vector2(36229, -47609)
+position = Vector2(36229, -47489.9)
 shape = SubResource("RectangleShape2D_6pbf5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NewLapDetector"]
+position = Vector2(40327, -53726)
+shape = SubResource("RectangleShape2D_p4h0c")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -263,6 +270,11 @@ script = ExtResource("13_5ikn2")
 
 [node name="FinishLine" type="Node2D" parent="."]
 position = Vector2(4768, -3264)
+
+[node name="Hell Portal" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hell Portal"]
+polygon = PackedVector2Array(-25431, -51347, -25299, -51467, -25353, -51718, -25532, -51724, -25628, -51508)
 
 [connection signal="body_entered" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_entered"]
 [connection signal="body_exited" from="EnteredPitStop" to="Vehicle" method="_on_entered_pit_stop_body_exited"]
@@ -275,7 +287,10 @@ position = Vector2(4768, -3264)
 [connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
 [connection signal="input_event" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_input_event"]
 [connection signal="player_detected" from="Loop Detector" to="." method="_on_loop_detector_player_detected"]
+[connection signal="player_detected" from="Loop Detector" to="Vehicle" method="_on_loop_detector_player_detected"]
 [connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
 [connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
+[connection signal="body_entered" from="Hell Portal" to="Vehicle" method="_on_hell_portal_body_entered"]
+[connection signal="input_event" from="Hell Portal" to="." method="_on_hell_portal_input_event"]

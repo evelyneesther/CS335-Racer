@@ -1,8 +1,6 @@
 extends Control
 
 
-func _ready():
-	get_tree().paused = true
 	
 func _unhandled_input(event):
 	if event is InputEventKey:

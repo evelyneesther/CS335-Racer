@@ -4,7 +4,7 @@ var carPath
 var carCode
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	carPath="res://Resources/Art/Red/Red -.png"
+	carPath="res://Resources/Art/Cars/Red/Red -.png"
 	carCode="RDDDD"
 	pass # Replace with function body.
 

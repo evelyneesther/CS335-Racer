@@ -88,7 +88,7 @@ func selected_car():
 			carCode+="R"
 			
 	CarArt.carCode=carCode
-	var carstr="res://Resources/Art/"+color+"/"+color+" - "+front+back+sides+direction
+	var carstr="res://Resources/Art/Cars/"+color+"/"+color+" - "+front+back+sides+direction
 	carstr=carstr.strip_edges()
 	
 	CarArt.carPath=carstr+".png"
