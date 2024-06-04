@@ -116,5 +116,5 @@ offset_top = 601.0
 offset_right = 1156.0
 offset_bottom = 651.0
 theme = ExtResource("8_7yypo")
-text = "v1.0.1a"
+text = "v1.0.2"
 script = ExtResource("9_tdsj7")

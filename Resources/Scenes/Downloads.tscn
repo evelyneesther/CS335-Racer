@@ -39,6 +39,16 @@ drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 
+[node name="LinkButton" type="LinkButton" parent="Sprite2D"]
+offset_left = -471.0
+offset_top = 1516.0
+offset_right = 566.0
+offset_bottom = 1779.0
+theme = ExtResource("1_1ojc7")
+theme_override_font_sizes/font_size = 256
+text = "Click Here"
+uri = "https://github.com/evelyneesther/CS335-Racer/releases"
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(848, 308)
 scale = Vector2(0.125, 0.125)
@@ -61,3 +71,13 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
+
+[node name="LinkButton" type="LinkButton" parent="Sprite2D2"]
+offset_left = -471.0
+offset_top = 1516.0
+offset_right = 566.0
+offset_bottom = 1779.0
+theme = ExtResource("1_1ojc7")
+theme_override_font_sizes/font_size = 256
+text = "Click Here"
+uri = "https://salveamicus.itch.io/symphonic-speedway"
