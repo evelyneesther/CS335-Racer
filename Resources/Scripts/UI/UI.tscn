@@ -18,6 +18,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 15.0
+offset_right = 112.0
+offset_bottom = 46.0
+
 [node name="Laps" type="Label" parent="Control"]
 unique_name_in_owner = true
 layout_mode = 0

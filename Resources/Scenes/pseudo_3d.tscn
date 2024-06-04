@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bfla8aje5f4q3"]
+[gd_scene load_steps=21 format=3 uid="uid://bfla8aje5f4q3"]
 
 [ext_resource type="Texture2D" uid="uid://dsjp33dam1x8d" path="res://Resources/Art/icon.svg" id="1_fdo8w"]
 [ext_resource type="Script" path="res://Resources/Scripts/Player/CharacterBody3D.gd" id="2_fkmip"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://qcmlawrdaiwl" path="res://Resources/Art/Maps/wall3.png" id="6_l46xg"]
 [ext_resource type="Texture2D" uid="uid://dj50e3fr7rrsh" path="res://Resources/Art/Maps/wall4.png" id="7_ys1q5"]
 [ext_resource type="Texture2D" uid="uid://bb0s7dfkwhgud" path="res://Resources/Art/Maps/top.png" id="8_rocvw"]
-[ext_resource type="AudioStream" uid="uid://h0khov3mukgt" path="res://Resources/Music/Fall.mp3" id="11_g6cgh"]
+[ext_resource type="AudioStream" uid="uid://biqqx575po484" path="res://Resources/Music/Transition.mp3" id="11_adb6y"]
+[ext_resource type="Script" path="res://Resources/Scenes/AudioStreamPlayer_alt.gd" id="11_p23a1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0te1w"]
 
@@ -124,7 +125,9 @@ texture = ExtResource("8_rocvw")
 transform = Transform3D(0.999996, 0, 0, 0, 0.999996, 1.84741e-13, 0, -1.84741e-13, 0.999996, 0, -1.77636e-15, -0.272461)
 shape = SubResource("BoxShape3D_ihcyl")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_g6cgh")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_adb6y")
 autoplay = true
-max_distance = 100000.0
+script = ExtResource("11_p23a1")
+
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]

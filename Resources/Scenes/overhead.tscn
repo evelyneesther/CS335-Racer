@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=23 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
@@ -12,8 +12,10 @@
 [ext_resource type="Script" path="res://Resources/Scripts/Track/Loop Block.gd" id="8_1ly6n"]
 [ext_resource type="FontFile" uid="uid://cukjuxejoshhx" path="res://Resources/Art/Fonts/dpcomic.regular.ttf" id="8_6540g"]
 [ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="9_n72q7"]
+[ext_resource type="Texture2D" uid="uid://d0xhxjbwjahab" path="res://Resources/Art/Maps/traffic cones.png" id="9_pyank"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/NewLapDetector.gd" id="10_iqxyv"]
 [ext_resource type="Script" path="res://Resources/Scripts/Track/AudioStreamPlayer.gd" id="11_ea1w1"]
+[ext_resource type="Texture2D" uid="uid://c7a7hkt1k4utw" path="res://Resources/Art/Maps/Vertical Cones.png" id="14_prbxg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uu7r"]
 radius = 3349.91
@@ -22,10 +24,10 @@ radius = 3349.91
 size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(29312, 8857)
+size = Vector2(23552, 14433)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
-size = Vector2(35418, 2296)
+size = Vector2(29996, 2296)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxifo"]
 size = Vector2(25600.5, 10932)
@@ -75,6 +77,9 @@ polygon = PackedVector2Array(40111.8, -21608.8, 40160.4, -8620.42, 41554.8, -789
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 polygon = PackedVector2Array(-20550.4, -33566.7, -7417.91, -33566.7, -6647.85, -34625, -6791.99, -35491.4, -21127.8, -35395.1, -20839.5, -34384.5)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(32010.6, -19295.4, 32524.3, -673.716, 33616, -1765.5, 34081.9, -16665.1, 32135.6, -17746.5)
 
 [node name="EnteredPitStop" type="Area2D" parent="."]
 
@@ -241,7 +246,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(6974, -31904.5)
+position = Vector2(9649, -32967.5)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
@@ -249,15 +254,40 @@ position = Vector2(44209, -26189)
 script = ExtResource("8_1ly6n")
 
 [node name="LoopBox" type="CollisionShape2D" parent="LoopBlock"]
-position = Vector2(-47860, -18930)
+position = Vector2(-45270, -18870)
 shape = SubResource("RectangleShape2D_upce0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoopBlock"]
 position = Vector2(7880.25, -13928)
 shape = SubResource("RectangleShape2D_lxifo")
 
-[node name="TrafficCones" type="Sprite2D" parent="LoopBlock"]
+[node name="TrafficConesControl" type="Control" parent="LoopBlock"]
 unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TrafficCones" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+unique_name_in_owner = true
+position = Vector2(-39592, -18666)
+scale = Vector2(70.599, 66.6631)
+texture = ExtResource("9_pyank")
+
+[node name="Sprite2D" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(392, 786.001)
+scale = Vector2(76.3333, 76.3333)
+texture = ExtResource("14_prbxg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-42040, 13207)
+scale = Vector2(67.8953, 84.9348)
+texture = ExtResource("9_pyank")
+
+[node name="Sprite2D3" type="Sprite2D" parent="LoopBlock/TrafficConesControl"]
+position = Vector2(-48927, 4335)
+scale = Vector2(48.1087, 48.1087)
+texture = ExtResource("9_pyank")
 
 [node name="NewLapDetector" type="Area2D" parent="."]
 position = Vector2(-8348, -168)
