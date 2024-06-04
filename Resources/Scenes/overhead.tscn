@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5djhsdysur05"]
+[gd_scene load_steps=24 format=3 uid="uid://c5djhsdysur05"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/Track/overhead.gd" id="1_r0xw4"]
 [ext_resource type="PackedScene" uid="uid://bnnrlwknig45j" path="res://Resources/Scripts/UI/UI.tscn" id="2_ax68v"]
@@ -25,6 +25,9 @@ size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
 size = Vector2(23552, 14433)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otc3w"]
+size = Vector2(10849, 12643)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(29996, 2296)
@@ -70,7 +73,7 @@ polygon = PackedVector2Array(42875.9, 11148.8, 42366.3, -37370.8, -32961.4, -378
 polygon = PackedVector2Array(-3808.89, -8726.34, -9148.37, -8341.7, -12804.4, -7812.93, -18096.1, -6273.6, -35939.7, -5771.9, -37223.4, -7120.11, -18922.7, -6991.9, -12365.6, -8105.19, -7651.24, -8833.84)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
-polygon = PackedVector2Array(7111.36, -394.996, 20292.4, -298.639, 20966.1, -1982.11, 6630.37, -2029.89)
+polygon = PackedVector2Array(-6580.16, -742.201, 6821.49, -333.678, 20292.4, -298.639, 20966.1, -1982.11, 3284.14, -2987.09, -8213.46, -2647.05)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 polygon = PackedVector2Array(40111.8, -21608.8, 40160.4, -8620.42, 41554.8, -7898.94, 41699.7, -8043.07, 41747.5, -22234.7, 40641.4, -22138.3)
@@ -241,13 +244,18 @@ theme = ExtResource("9_n72q7")
 text = "Resume"
 script = ExtResource("7_jcu66")
 
-[node name="Loop Detector" type="Area2D" parent="."]
+[node name="LoopDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoopDetector"]
 position = Vector2(9649, -32967.5)
 shape = SubResource("RectangleShape2D_2vg0w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LoopDetector"]
+position = Vector2(-11877.5, -34066.5)
+shape = SubResource("RectangleShape2D_otc3w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
 position = Vector2(44209, -26189)
@@ -321,10 +329,12 @@ polygon = PackedVector2Array(-4121, -54900, -3801, -54996, -3801, -55524, -4297,
 [connection signal="item_selected" from="UICanvas/PitStopMenu/ColorButton" to="UICanvas/PitStopMenu" method="_on_color_button_item_selected"]
 [connection signal="item_selected" from="UICanvas/PitStopMenu/FrontWingButton" to="UICanvas/PitStopMenu" method="_on_front_wing_button_item_selected"]
 [connection signal="item_selected" from="UICanvas/PitStopMenu/DorsalWingButton" to="UICanvas/PitStopMenu" method="_on_dorsal_wing_button_item_selected"]
-[connection signal="input_event" from="Loop Detector" to="Loop Detector" method="_on_input_event"]
-[connection signal="player_detected" from="Loop Detector" to="." method="_on_loop_detector_player_detected"]
-[connection signal="player_detected" from="Loop Detector" to="Vehicle" method="_on_loop_detector_player_detected"]
-[connection signal="player_detected" from="Loop Detector" to="LoopBlock" method="_on_loop_detector_player_detected"]
+[connection signal="body_entered" from="LoopDetector" to="Vehicle" method="_on_loop_detector_body_entered"]
+[connection signal="body_entered" from="LoopDetector" to="LoopDetector" method="_on_body_entered"]
+[connection signal="input_event" from="LoopDetector" to="LoopDetector" method="_on_input_event"]
+[connection signal="player_detected" from="LoopDetector" to="." method="_on_loop_detector_player_detected"]
+[connection signal="player_detected" from="LoopDetector" to="Vehicle" method="_on_loop_detector_player_detected"]
+[connection signal="player_detected" from="LoopDetector" to="LoopBlock" method="_on_loop_detector_player_detected"]
 [connection signal="body_entered" from="NewLapDetector" to="." method="_on_new_lap_detector_body_entered"]
 [connection signal="input_event" from="NewLapDetector" to="NewLapDetector" method="_on_input_event"]
 [connection signal="lap_started" from="NewLapDetector" to="LoopBlock" method="_on_new_lap_detector_lap_started"]
