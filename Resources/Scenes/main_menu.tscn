@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c885xr3rhi2oj"]
+[gd_scene load_steps=9 format=3 uid="uid://c885xr3rhi2oj"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/UI/MainMenu.gd" id="1_sv5fb"]
 [ext_resource type="Texture2D" uid="uid://d0avcq7xolx2n" path="res://Resources/Art/UI/Title Screen.png" id="2_lkj11"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Resources/Scripts/UI/StartButton.gd" id="5_7j0gv"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/ModifyButton.gd" id="6_325e5"]
 [ext_resource type="Script" path="res://Resources/Scripts/UI/LoadHelpMenu.gd" id="7_bsdvy"]
+[ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="8_7yypo"]
 
 [node name="Control3" type="Control"]
 layout_mode = 3
@@ -87,3 +88,21 @@ offset_right = 1141.0
 offset_bottom = 53.0
 flat = true
 script = ExtResource("7_bsdvy")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 1068.0
+offset_top = 609.0
+offset_right = 1147.0
+offset_bottom = 684.0
+theme = ExtResource("8_7yypo")
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+text = "v1.0c"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false

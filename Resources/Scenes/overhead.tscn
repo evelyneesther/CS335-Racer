@@ -24,7 +24,7 @@ radius = 3349.91
 size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(23552, 8857)
+size = Vector2(23552, 14433)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(29996, 2296)
@@ -246,7 +246,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(9649, -32928)
+position = Vector2(9649, -32967.5)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
