@@ -24,7 +24,7 @@ radius = 3349.91
 size = Vector2(8630, 31147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vg0w"]
-size = Vector2(29312, 8857)
+size = Vector2(23552, 8857)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upce0"]
 size = Vector2(29996, 2296)
@@ -46,7 +46,6 @@ scale = Vector2(31.0054, 31.0054)
 texture = ExtResource("3_58hka")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Map"]
-visible = false
 position = Vector2(-176.583, 521.974)
 scale = Vector2(0.0405007, 0.0405007)
 
@@ -78,6 +77,9 @@ polygon = PackedVector2Array(40111.8, -21608.8, 40160.4, -8620.42, 41554.8, -789
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
 polygon = PackedVector2Array(-20550.4, -33566.7, -7417.91, -33566.7, -6647.85, -34625, -6791.99, -35491.4, -21127.8, -35395.1, -20839.5, -34384.5)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(32010.6, -19295.4, 32524.3, -673.716, 33616, -1765.5, 34081.9, -16665.1, 32135.6, -17746.5)
 
 [node name="EnteredPitStop" type="Area2D" parent="."]
 
@@ -244,7 +246,7 @@ position = Vector2(17128, -17928)
 script = ExtResource("7_h1y4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loop Detector"]
-position = Vector2(6974, -31904.5)
+position = Vector2(9649, -32928)
 shape = SubResource("RectangleShape2D_2vg0w")
 
 [node name="LoopBlock" type="StaticBody2D" parent="."]
