@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba420t7w7nf11"]
+
+[ext_resource type="Theme" uid="uid://yw75lbrm6ch7" path="res://Resources/Art/Buttons/ButtonTheme.tres" id="1_1ojc7"]
+[ext_resource type="Script" path="res://Resources/Scripts/UI/HowToContinueButton.gd" id="2_j86nd"]
+[ext_resource type="Texture2D" uid="uid://demeqqstjk5ey" path="res://Resources/Art/UI/Github QR.png" id="3_sxkql"]
+[ext_resource type="Texture2D" uid="uid://btqrrnr3dy21b" path="res://Resources/Art/UI/Itch QR.png" id="4_js1gq"]
+
+[node name="Downloads" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 453.0
+offset_top = 543.0
+offset_right = 676.0
+offset_bottom = 587.0
+theme = ExtResource("1_1ojc7")
+text = "Back"
+script = ExtResource("2_j86nd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(276, 303)
+scale = Vector2(0.125333, 0.125333)
+texture = ExtResource("3_sxkql")
+
+[node name="TextEdit" type="TextEdit" parent="Sprite2D"]
+offset_left = -303.0
+offset_top = -1779.0
+offset_right = 335.0
+offset_bottom = -1508.0
+theme = ExtResource("1_1ojc7")
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 256
+text = "Github"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(848, 308)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_js1gq")
+
+[node name="TextEdit" type="TextEdit" parent="Sprite2D2"]
+offset_left = -303.0
+offset_top = -1779.0
+offset_right = 335.0
+offset_bottom = -1508.0
+theme = ExtResource("1_1ojc7")
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 256
+text = "Itch.io"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
